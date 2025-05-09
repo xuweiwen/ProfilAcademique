@@ -1,0 +1,149 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+# Site Settings
+title                    : "Profil Academique"
+description              : "A modern, academic-themed personal website template."
+url                      : "https://weixu.xyz"
+baseurl                  : "/ProfilAcademique"
+
+# google analytics
+google_analytics_id      : "google-analytics-id-placeholder" # get google_analytics_id from https://analytics.google.com/analytics/
+
+# SEO Related
+google_site_verification : # get google_site_verification from https://search.google.com/search-console/about
+bing_site_verification   : # get bing_site_verification from https://www.bing.com/webmasters/about
+baidu_site_verification  : # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
+
+# Site Author
+author:
+  locale           : "en-US"
+  name             : "Profil Academique"
+  avatar           : "/images/avatar.jpg"
+  bio              : "A website template"
+  location         : "City, Country"
+  employer         :
+  googlescholar    : "google-scholar-id-placeholder"
+  email            : "example@example.com"
+  researchgate     :
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         : "linkedin-username-placeholder"
+  orcid            :
+  pinterest        :
+  soundcloud       :
+  stackoverflow    :
+  steam            :
+  tumblr           :
+  weibo            :
+  xing             :
+  youtube          :
+  wikipedia        :
+
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - docs
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .github
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - README
+  - Rakefile
+  # - assets/js/main.js
+  # - assets/js/modules
+  # - assets/js/utils
+  - _pages/includes
+  - config
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+# uncomment this if use github theme
+# also switch @import "syntax"; -> @import "rouge"; in assets/css/main.scss
+# rouge:
+#   theme: github # uncomment this if use github theme
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+      author_profile: true
+
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+# Outputting
+permalink: /:categories/:title/
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-redirect-from
+
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

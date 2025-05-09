@@ -1,0 +1,39 @@
+---
+---
+
+/*
+ *  This project is a derivative work of Minimal Mistakes Jekyll Theme
+ *  originally developed by Michael Rose https://github.com/mmistakes/minimal-mistakes).
+ *
+ *  Copyright (c) 2025 Wei Xu
+ *  ProfilAcademique: https://github.com/xuweiwen/ProfilAcademique
+ *  This project is licensed under the MIT License.
+ *  See LICENSE file for full license text.
+*/
+
+@import "vendor/fontawesome/fontawesome";
+@import "vendor/fontawesome/brands";
+@import "vendor/fontawesome/solid";
+@import "variables";
+@import "mixins";
+
+@import "reset";
+@import "base";
+
+@import "utilities";
+
+@import "animations";
+@import "tables";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "cookie-consent";
+@import "syntax";
+// @import "rouge";
+
+@import "page";
+@import "sidebar";
+
+@import "print";
+@import "collapse";

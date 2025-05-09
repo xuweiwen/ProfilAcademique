@@ -1,0 +1,74 @@
+/* ==========================================================================
+   STYLE RESETS
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* apply a natural box layout model to all elements */
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  font-size: $doc-font-size;
+
+  text-size-adjust: 100%;
+}
+
+/* Remove margin */
+
+body { 
+  margin: 0;
+  padding: 0;
+}
+
+/* Selected elements */
+
+::selection {
+  color: var(--background-color);
+  background: var(--text-color);
+}
+
+/* Prevents modern browsers from displaying 'audio' without controls */
+
+audio:not([controls]) {
+  display: none;
+}
+
+/* Prevent sub and sup affecting line-height in all browsers */
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* img border in anchor's and image quality */
+
+img {
+  /* Responsive images (ensure images don't scale beyond their parents) */
+  max-width: 100%; /* part 1: Set a maximum relative to the parent*/
+  height: auto; /* part 2: Scale the height according to the width, otherwise you get stretching*/
+
+  vertical-align: middle;
+  border: 0;
+}
+
+/* Prevent max-width from affecting Google Maps */
+
+#map_canvas img,
+.google-maps img {
+  max-width: none;
+}

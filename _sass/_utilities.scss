@@ -1,0 +1,395 @@
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+
+/*
+   Visibility
+   ========================================================================== */
+
+/* http://www.456bereastreet.com/archive/200711/screen_readers_sometimes_ignore_displaynone/ */
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* for preloading images */
+
+.load {
+  display: none;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+/* https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html */
+
+.visually-hidden,
+.screen-reader-text,
+.screen-reader-text span,
+.screen-reader-shortcut {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px !important;
+  width: 1px !important;
+  border: 0 !important;
+  overflow: hidden;
+}
+
+body:hover .visually-hidden a,
+body:hover .visually-hidden input,
+body:hover .visually-hidden button {
+  display: none !important;
+}
+
+/* screen readers */
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus  {
+  clip: auto !important;
+  height: auto !important;
+  width: auto !important;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 15px 23px 14px;
+  background: var(--background-color);
+  z-index: 10000;
+  text-decoration: none;
+  box-shadow: var(--box-shadow);
+}
+
+
+/*
+   Skip links
+   ========================================================================== */
+
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 8000;
+
+  display: flex;
+  gap: 1rem;
+  padding: .5rem;
+  background: $lighter-gray;
+  border-radius: $border-radius;
+  box-shadow: var(--box-shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: $global-transition;
+
+  &:has(a:focus) {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  a {
+    color: #fff;
+    padding: .5rem;
+    background: $primary-color;
+    font-family: $sans-serif;
+    font-size: $type-size-5;
+    text-decoration: none;
+    border-radius: $border-radius;
+    transition: $global-transition;
+
+    &:focus {
+      background: var(--link-color);
+    }
+  }
+}
+
+
+/*
+   Type
+   ========================================================================== */
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+
+/*
+   Images
+   ========================================================================== */
+
+/* image align left */
+
+.align-left {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint($small) {
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+/* image align right */
+
+.align-right {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint($small) {
+    float: right;
+    margin-left: 1em;
+  }
+}
+
+/* image align center */
+
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* file page content container */
+
+.full {
+  @include breakpoint($large){
+    margin-right: -20% !important;
+  }
+}
+
+/*
+   Icons
+   ========================================================================== */
+
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  width: 1em;
+  height: 1.1em;
+  line-height: 1;
+  position: relative;
+  top: -0.1em;
+  vertical-align: middle;
+}
+
+/* social icons*/
+
+.social-icons {
+  .fa {
+    color: #000;
+  }
+
+  .fa-dribbble,
+  .fa-square-dribbble {
+    color: $dribbble-color;
+  }
+
+  .fa-facebook,
+  .fa-square-facebook {
+    color: $facebook-color;
+  }
+
+  .fa-flickr {
+    color: $flickr-color;
+  }
+
+  .fa-foursquare {
+    color: $foursquare-color;
+  }
+
+  .fa-github,
+  .fa-square-github {
+    color: $github-color;
+  }
+
+  .fa-instagram,
+  .fa-square-instagram {
+    color: $instagram-color;
+  }
+
+  .fa-lastfm,
+  .fa-square-lastfm {
+    color: $lastfm-color;
+  }
+
+  .fa-linkedin {
+    color: $linkedin-color;
+  }
+
+  .fa-pinterest,
+  .fa-square-pinterest {
+    color: $pinterest-color;
+  }
+
+  .fa-soundcloud {
+    color: $soundcloud-color;
+  }
+
+  .fa-tumblr,
+  .fa-square-tumblr {
+    color: $tumblr-color;
+  }
+
+  .fa-youtube,
+  .fa-square-youtube {
+    color: $youtube-color;
+  }
+
+  .fa-xing,
+  .fa-square-xing {
+    color: $xing-color;
+  }
+
+  .fa-google-scholar {
+    color: $googlescholar-color;
+  }
+}
+
+
+/*
+   Navicons
+   ========================================================================== */
+
+.navicon {
+  position: relative;
+  width: $navicon-width;
+  height: $navicon-height;
+  background: var(--background-color);
+  margin: auto;
+  transition: 0.3s;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: $navicon-width;
+    height: $navicon-height;
+    background: var(--background-color);
+    transition: 0.3s;
+  }
+
+  &:before {
+    top: (-2 * $navicon-height);
+  }
+
+  &:after {
+    bottom: (-2 * $navicon-height);
+  }
+}
+
+.close .navicon {
+  /* hide the middle line*/
+  background: transparent;
+
+  /* overlay the lines by setting both their top values to 0*/
+  &:before, &:after{
+    transform-origin: 50% 50%;
+    top: 0;
+    width: $navicon-width;
+  }
+
+  /* rotate the lines to form the x shape*/
+  &:before{
+    transform: rotate3d(0,0,1,45deg);
+  }
+  &:after{
+    transform: rotate3d(0,0,1,-45deg);
+  }
+}
+
+
+/*
+   Sticky, fixed to top content
+   ========================================================================== */
+
+.sticky {
+  @include breakpoint($large) {
+    position: sticky;
+    top: 6em;
+
+    > * {
+      display: block;
+    }
+  }
+}
+
+
+/*
+   Wells
+
+   Usage:
+   <div class="well">
+     <h3>Important</h3>
+     <p>This is a "well" section.</p>
+   </div>
+   ========================================================================== */
+
+.well {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--background-color-emph);
+  border: 1px solid var(--text-color);
+  border-radius: $border-radius;
+  box-shadow: var(--box-shadow);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+/*
+   Footnotes
+   ========================================================================== */
+
+.footnote {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footnotes {
+  color: var(--text-color);
+
+  ol, li, p {
+    margin-bottom: 0;
+    font-size: $type-size-6;
+  }
+}
+
+a.reversefootnote {
+  color: var(--text-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+/*
+   Required
+   ========================================================================== */
+
+.required {
+  color: $danger-color;
+  font-weight: bold;
+}

@@ -1,0 +1,206 @@
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+/*
+   Priority plus navigation
+   ========================================================================== */
+
+.greedy-nav {
+  position: relative;
+  min-width: 250px;
+  background: var(--background-color);
+
+  a {
+    display: block;
+    // margin: 0 1rem;
+    margin-right: 2rem;
+    padding: 0.5rem 0;
+    color: var(--masthead-link-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--masthead-link-color-hover);
+    }
+  }
+
+  button {
+    position: absolute;
+    height: 80%;
+    top: .2rem;
+    right: 2.5rem;
+    padding: 0 .5rem;
+    border: 0;
+    border-radius: $border-radius;
+    outline: none;
+    background-color: $primary-color;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .button--theme {
+    right: 0;
+    padding: 0;
+    background-color: transparent;
+    i {
+      font-size: $type-size-1;
+      color: var(--masthead-link-color);
+    }
+  }
+
+  .visible-links {
+    display: table;
+
+    li {
+      display: table-cell;
+      vertical-align: middle;
+
+      &:first-child {
+        font-weight: bold;
+
+        a {
+          margin-left: 0;
+        }
+      }
+
+      &:last-child {
+        a {
+          margin-right: 0;
+        }
+      }
+    }
+
+    a {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        background: var(--masthead-link-color-hover);
+        width: 100%;
+        transition: $global-transition;
+        transform: scaleX(0); /* hide*/
+      }
+
+      &:hover:before {
+        transform: scaleX(1); /* reveal*/
+      }
+    }
+  }
+
+  .hidden-links {
+    position: absolute;
+    top: 100%;
+    right: .4rem;
+    margin-top: 15px;
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: $border-radius;
+    background: var(--background-color);
+    box-shadow: var(--box-shadow);
+
+    a {
+      margin: 0;
+      padding: 10px 20px;
+
+      &:hover {
+        color: var(--masthead-link-color-hover);
+        background: var(--background-color-emph);
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -11px;
+      right: 37px;
+      width: 0;
+      border-style: solid;
+      border-width: 0 10px 10px;
+      border-color: var(--border-color) transparent;
+      display: block;
+      z-index: 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 37px;
+      width: 0;
+      border-style: solid;
+      border-width: 0 10px 10px;
+      border-color: var(--background-color) transparent;
+      display: block;
+      z-index: 1;
+    }
+
+    li {
+      display: block;
+      border-bottom: 1px solid var(--border-color);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+
+/*
+   Navigation list
+   ========================================================================== */
+
+.nav__list {
+  font-size: $type-size-5;
+
+  ul {
+    margin-bottom: 1em;
+  }
+
+  a {
+    display: block;
+    padding: 0.125em 0;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .active {
+    margin-left: -0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: var(--text-color);
+    font-weight: bold;
+    background: $primary-color;
+    border-radius: $border-radius;
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+}
+
+.nav__title {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-family: $sans-serif-narrow;
+  font-size: $type-size-5;
+  font-weight: bold;
+}
+
+.nav__sub-title {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  font-family: $sans-serif-narrow;
+  font-size: $type-size-6;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
+}

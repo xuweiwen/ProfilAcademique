@@ -1,0 +1,43 @@
+---
+layout: compress
+---
+
+<!--
+  Copyright (c) 2025 Wei Xu
+  ProfilAcademique: https://github.com/xuweiwen/ProfilAcademique
+  Licensed under the MIT License.
+  See LICENSE file for full license text.
+-->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+
+    {% include browser-upgrade.html %}
+    {% include cookie-consent.html %}
+    {% include skip-link.html %}
+    {% include masthead.html %}
+
+    <div id="main" role="main">
+      {% include sidebar.html %}
+    
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <div class="page__inner-wrap">
+          <section id="main_content" class="page__content" itemprop="text">
+            {{ content }}
+          </section>
+        </div>
+      </article>
+    </div>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+
+  </body>
+  
+</html>

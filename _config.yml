@@ -8,8 +8,8 @@
 # Site Settings
 title                    : "Profil Academique"
 description              : "A modern, academic-themed personal website template."
-url                      : "https://weixu.xyz"
-baseurl                  : "/ProfilAcademique"
+url                      : "https://weixu.xyz" # URL of the site, adjust as needed
+baseurl                  : "/ProfilAcademique" # Base URL for the site, adjust if hosted in a subdirectory
 
 # google analytics
 google_analytics_id      : "google-analytics-id-placeholder" # get google_analytics_id from https://analytics.google.com/analytics/

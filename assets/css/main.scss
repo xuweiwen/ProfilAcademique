@@ -11,6 +11,8 @@
  *  See LICENSE file for full license text.
 */
 
+$fa-font-path: "{{ site.baseurl }}/assets/fontawesome/webfonts";
+
 @import "vendor/fontawesome/fontawesome";
 @import "vendor/fontawesome/brands";
 @import "vendor/fontawesome/solid";

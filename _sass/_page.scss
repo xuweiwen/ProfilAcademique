@@ -40,14 +40,13 @@
 
 .page__content {
   #about-me{
-    margin-top: -16em;
+    position: relative;
       &:before { 
         content: ''; 
         display: block; 
-        position: relative; 
-        width: 0; 
-        height: 16em; 
-        margin-top: -16em;
+        height: 30em; 
+        margin-top: -30em;
+        visibility: hidden;
     }
   }
   

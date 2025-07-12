@@ -74,12 +74,13 @@
   justify-content: flex-start;
   align-content: flex-start;
   align-items: center;
+  flex-direction: column;
 }
 
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 75px;
+  width: 105px;
   // set width only, for non-square avatars
   // height: 36px;
 
@@ -91,7 +92,7 @@
 
   img {
     max-width: 175px;
-    min-width: 75px;
+    min-width: 105px;
     border-radius: $border-radius;
     box-shadow: var(--box-shadow);
   }
@@ -100,9 +101,10 @@
 .author__content {
   display: table-cell;
   vertical-align: top;
-  padding-left: 10px;
   min-width: 120px;
   line-height: 1;
+  margin-top: .75em;
+  text-align: center;
 
   @include breakpoint($large) {
     display: block;
@@ -145,7 +147,6 @@
   font-family: $sans-serif;
   z-index: 10;
   position: relative;
-  margin-left: auto;
   cursor: pointer;
 
   li:last-child {
@@ -208,8 +209,8 @@
   padding: .25em;
   font-size: 1.75em;
   display: block;
-  margin: 0;
-  text-align: right;
+  margin: 0 0 .2em 0;
+  text-align: center;
   a {
     color: inherit;
   }

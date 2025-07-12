@@ -97,7 +97,7 @@
         <li><a href="https://codepen.io/{{ author.codepen }}"><i class="fa-brands fa-fw fa-codepen" aria-hidden="true"></i> <span>CodePen</span></a></li>
       {% endif %}
       {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}"><i class="fa-brands fa-fw fa-google-scholar"></i> <span>Google Scholar</span></a></li>
+        <li><a href="https://scholar.google.com/citations?user={{ author.googlescholar }}&hl=en"><i class="fa-brands fa-fw fa-google-scholar"></i> <span>Google Scholar</span></a></li>
       {% endif %}
       {% if author.orcid %}
         <li><a href="{{ author.orcid }}"><i class="fa-brands fa-fw fa-orcid"></i> <span>ORCID</span></a></li>
@@ -174,7 +174,7 @@
         <a href="https://codepen.io/{{ author.codepen }}"><i class="fa-brands fa-fw fa-codepen" aria-hidden="true"></i></a>
       {% endif %}
       {% if author.googlescholar %}
-        <a href="{{ author.googlescholar }}"><i class="fa-brands fa-fw fa-google-scholar"></i></a>
+        <a href="https://scholar.google.com/citations?user={{ author.googlescholar }}&hl=en"><i class="fa-brands fa-fw fa-google-scholar"></i></a>
       {% endif %}
       {% if author.orcid %}
         <a href="{{ author.orcid }}"><i class="fa-brands fa-fw fa-orcid"></i></a>

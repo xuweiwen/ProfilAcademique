@@ -40,12 +40,11 @@
 
 .page__content {
   #about-me{
-    position: relative;
-    z-index: -10;
-      &:before { 
+      &:before {
         content: ''; 
         display: block; 
         visibility: hidden;
+        position: relative;
         height: 30em; 
         margin-top: -30em;
         @include breakpoint($large) {

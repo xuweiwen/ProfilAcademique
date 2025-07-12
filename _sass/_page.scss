@@ -44,9 +44,13 @@
       &:before { 
         content: ''; 
         display: block; 
+        visibility: hidden;
         height: 30em; 
         margin-top: -30em;
-        visibility: hidden;
+        @include breakpoint($large) {
+          height: 4em; 
+          margin-top: -4em;
+        }
     }
   }
   

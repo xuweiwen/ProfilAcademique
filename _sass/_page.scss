@@ -45,8 +45,8 @@
         display: block; 
         visibility: hidden;
         position: relative;
-        height: 30em; 
-        margin-top: -30em;
+        height: 31em; 
+        margin-top: -31em;
         @include breakpoint($large) {
           height: 4em; 
           margin-top: -4em;

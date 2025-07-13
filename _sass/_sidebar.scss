@@ -80,23 +80,27 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  margin-top: .5em;
   width: 105px;
   // set width only, for non-square avatars
   // height: 36px;
+
+  img {
+    margin-top: 1em;
+    max-width: 175px;
+    min-width: 105px;
+    border-radius: $border-radius;
+    box-shadow: var(--box-shadow);
+  }
 
   @include breakpoint($large) {
     display: block;
     margin-top: 0;
     width: auto;
     height: auto;
-  }
-
-  img {
-    max-width: 175px;
-    min-width: 105px;
-    border-radius: $border-radius;
-    box-shadow: var(--box-shadow);
+    
+    img {
+      margin-top: 0;
+    }
   }
 }
 

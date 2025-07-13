@@ -10,7 +10,7 @@ import { initMoveFocusSkipLink, initShowNotice } from './utils/index.js';
 
 const OFFSET = -20;
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
 
   initPageHeightAdj();
   initMoveFocusSkipLink('skip-link-main-content');
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   initResponsiveNav();
   initSmoothScroll({ offset: OFFSET, duration: 400 });
   initThemeToggle();
-  initCollapsibleSections({expandedLabel: " - show", collapsedLabel: " - hide"});
+  initCollapsibleSections({expandedLabel: ' - show', collapsedLabel: ' - hide'});
   initShowNotice();
   
 });

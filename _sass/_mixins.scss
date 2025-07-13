@@ -99,3 +99,7 @@
     }
   }
 }
+
+@mixin divider($color: var(--border-color)) {
+  border-bottom: 1px solid $color;
+}

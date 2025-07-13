@@ -40,8 +40,8 @@ function initSmoothScroll({ offset = 0, duration = 400 } = {}) {
   }
 
   document.querySelectorAll('a[href*="#"]').forEach(link => {
-    link.addEventListener("click", function (e) {
-      const href = link.getAttribute("href");
+    link.addEventListener('click', function (e) {
+      const href = link.getAttribute('href');
       const url = new URL(href, window.location.href);
       const isSamePath = url.pathname === window.location.pathname;
       const isSameHost = url.hostname === window.location.hostname;

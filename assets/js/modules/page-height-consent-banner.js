@@ -6,19 +6,19 @@
  */
 
 function initPageHeightAdj() {
-  const banner = document.getElementById("cookie-consent-banner");
+  const banner = document.getElementById('cookie-consent-banner');
   var bumpIt = function() {
-    if (banner && banner.style.display !== "none") {
+    if (banner && banner.style.display !== 'none') {
       var bannerHeight = banner.offsetHeight;
-      document.body.style.marginBottom = bannerHeight + "px";
+      document.body.style.marginBottom = bannerHeight + 'px';
     } else {
-      document.body.style.marginBottom = "0";
+      document.body.style.marginBottom = '0';
     }
   };
 
   let didResize = false;
   // Handle resize events
-  window.addEventListener("resize", function () {
+  window.addEventListener('resize', function () {
     didResize = true;
   });
   // Polling to check for resize
@@ -31,7 +31,7 @@ function initPageHeightAdj() {
 
   if (banner) {
     const observer = new MutationObserver(bumpIt);
-    observer.observe(banner, { attributes: true, attributeFilter: ["style", "class"] });
+    observer.observe(banner, { attributes: true, attributeFilter: ['style', 'class'] });
   }
   bumpIt();
 }

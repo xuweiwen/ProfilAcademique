@@ -26,7 +26,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 <div class="paper-box-image">
 <div markdown="1">
 <div class="badge-image">[Conference] [Year]</div>
-![Paper cover]({{ "/images/publication-teaser/example-image.png" | relative_url }}){: width="100%" }
+![Paper cover]({{ "/images/publication-teaser/example-image.png" | relative_url }})
 </div>
 </div>
 <div class="paper-box-text" markdown="1">

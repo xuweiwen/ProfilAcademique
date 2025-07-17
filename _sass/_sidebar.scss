@@ -218,8 +218,11 @@
   display: block;
   margin: 0 0 .2em 0;
   text-align: center;
-  a {
-    color: inherit;
+  li {
+    display: inline-flex;
+    a {
+      color: inherit;
+    }
   }
   @include breakpoint($large) {
     display: none;

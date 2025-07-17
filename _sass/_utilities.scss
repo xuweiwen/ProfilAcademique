@@ -6,8 +6,6 @@
    Visibility
    ========================================================================== */
 
-/* http://www.456bereastreet.com/archive/200711/screen_readers_sometimes_ignore_displaynone/ */
-
 .hidden {
   display: none;
   visibility: hidden;
@@ -23,18 +21,19 @@
   opacity: 0;
 }
 
-/* https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html */
-
 .visually-hidden,
 .screen-reader-text,
 .screen-reader-text span,
 .screen-reader-shortcut {
   position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px !important;
   width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
   border: 0 !important;
-  overflow: hidden;
+  clip-path: inset(50%) !important;
 }
 
 body:hover .visually-hidden a,
@@ -43,17 +42,19 @@ body:hover .visually-hidden button {
   display: none !important;
 }
 
-/* screen readers */
-
 .screen-reader-text:focus,
-.screen-reader-shortcut:focus  {
-  clip: auto !important;
-  height: auto !important;
+.screen-reader-shortcut:focus {
+  position: static !important;
   width: auto !important;
+  height: auto !important;
+  padding: 15px 23px 14px;
+  margin: 0;
+  overflow: visible;
+  clip-path: none !important;
+  white-space: normal;
   display: block;
   font-size: 1em;
   font-weight: bold;
-  padding: 15px 23px 14px;
   background: var(--background-color);
   z-index: 10000;
   text-decoration: none;

@@ -126,7 +126,7 @@
     display: flex;
     width: 100%;
     order: 1;
-    padding: 0 0 .4em 0;
+    padding: .5em 0;
     img {
       width: 100%;
       max-width: 400px;
@@ -192,5 +192,4 @@ h2:before, .anchor:before {
 
 .custom-divider {
   @include divider();
-  margin-bottom: .4em;
 }

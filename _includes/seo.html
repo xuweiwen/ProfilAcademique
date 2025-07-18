@@ -19,28 +19,28 @@
 {% assign seo_description = page.description | default: page.excerpt | default: site.description %}
 {% if seo_description %}
   {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
-  <meta property="og:description" content="{{ seo_description }}" />
+  <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
 
-<meta property="og:locale" content="{{ site.locale | replace: '-', '_' | default: 'en_US' }}" />
-<meta property="og:site_name" content="{{ site.title }}" />
-<meta property="og:title" content="{{ site.title }}" />
-<meta property="og:image" content="{{ site.url }}/{{ site.author.avatar }}" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="{{ site.locale | replace: '-', '_' | default: 'en_US' }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ site.title }}">
+<meta property="og:image" content="{{ site.url }}/{{ site.author.avatar }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 {% if seo_url %}
-  <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: '/index.html', '/' }}" />
-  <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: '/index.html', '/' }}" />
+  <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: '/index.html', '/' }}">
+  <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: '/index.html', '/' }}">
 {% endif %}
 
 {% if site.google_site_verification %}
-  <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
 {% endif %}
 {% if site.bing_site_verification %}
-  <meta name="msvalidate.01" content="{{ site.bing_site_verification }}" />
+  <meta name="msvalidate.01" content="{{ site.bing_site_verification }}">
 {% endif %}
 {% if site.baidu_site_verification %}
-  <meta name="baidu-site-verification" content="{{ site.baidu_site_verification }}" />
+  <meta name="baidu-site-verification" content="{{ site.baidu_site_verification }}">
 {% endif %}
 <!-- end SEO -->

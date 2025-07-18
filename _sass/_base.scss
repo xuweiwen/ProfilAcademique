@@ -19,7 +19,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 1em 0 0.5em;
+  margin: ($space-var * 2) 0 $space-var;
   line-height: 1.2;
   font-family: $header-font-family;
   font-weight: bold;
@@ -54,7 +54,7 @@ small, .small {
 }
 
 p {
-  margin-bottom: 0.5em;
+  margin-bottom: $space-var;
 }
 
 u,
@@ -68,7 +68,7 @@ ins {
 
 ul {
   padding-inline-start: 2em;
-  margin-block-start: 0.5em;
+  margin-block-start: $space-var;
 }
 
 del a {
@@ -204,12 +204,12 @@ hr {
 
 ul li,
 ol li {
-  margin-bottom: 0.5em;
+  margin-bottom: $space-var;
 }
 
 li ul,
 li ol {
-  margin-top: 0.5em;
+  margin-top: $space-var;
 }
 
 /*
@@ -271,7 +271,7 @@ figure {
 /* Figure captions */
 
 figcaption {
-  margin-bottom: 0.5em;
+  margin-bottom: $space-var;
   color: var(--text-color);
   font-family: $caption-font-family;
   font-size: $type-size-6;

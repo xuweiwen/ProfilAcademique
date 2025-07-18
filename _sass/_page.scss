@@ -65,13 +65,13 @@
 
   /* paragraph indents */
   p {
-    margin: 0 0 $indent-var;
+    margin: 0 0 $space-var;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {
       & + p {
         text-indent: $indent-var;
-        margin-top: -($indent-var);
+        margin-top: -($space-var);
       }
     }
   }
@@ -126,9 +126,8 @@
     display: flex;
     width: 100%;
     order: 1;
-    padding: .5em 0;
     p {
-      margin: 0;
+      margin: $space-var 0;
     }
     img {
       width: 100%;
@@ -158,6 +157,9 @@
       padding-left: 2em;
       max-width: 65%;
       order: 2;
+      p {
+        margin: $space-var 0;
+      }
     }
   }
 }
@@ -175,7 +177,7 @@ h2:before, .anchor:before {
   padding-left: 1.1em;
   padding-right: 1.1em;
   position: absolute;
-  margin-top: .5em;
+  margin-top: $space-var * 2;
   margin-left: -.8em;
   color: #fff;
   background-color: var(--link-color);

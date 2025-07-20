@@ -29,34 +29,31 @@
       text-decoration: none;
     }
   }
-}
 
-.masthead__menu {
+  &__menu {
 
-  ul {
-    margin: 0;
-    padding: 0;
-    clear: both;
-    list-style-type: none;
+    ul {
+      margin: 0;
+      padding: 0;
+      clear: both;
+      list-style-type: none;
+    }
+
+    &-home-item {
+      display: none !important;
+      @include breakpoint($medium) {
+        display: block !important;
+      }
+    }
+
+    &-item {
+      display: block;
+      list-style-type: none;
+      white-space: nowrap;
+
+      &--lg {
+        padding-right: 2em;
+      }
+    }
   }
 }
-
-.masthead__menu-home-item {
-  @include breakpoint($medium) {
-    display: block !important;
-  }
-  display: none !important;
-}
-
-.masthead__menu-item {
-  display: block;
-  list-style-type: none;
-  white-space: nowrap;
-
-  &--lg {
-    padding-right: 2em;
-    font-weight: 700;
-  }
-}
-
-

@@ -26,6 +26,7 @@ layout: compress
       {% include sidebar.html %}
     
       <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        {% if page.title and page.title != "" %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
         <div class="page__inner-wrap">
           <section id="main_content" class="page__content" itemprop="text">
             {{ content }}

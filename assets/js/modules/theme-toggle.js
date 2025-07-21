@@ -7,6 +7,7 @@
 
 function initThemeToggle() {
 
+  const metaThemeColor = document.querySelector('meta[name="theme-color"]');
   const themeToggle = document.getElementById('theme-toggle');
   const icon = themeToggle.querySelector('i');
 
@@ -15,6 +16,12 @@ function initThemeToggle() {
     localStorage.setItem('theme', theme);
     icon.style.transition = 'opacity 0.3s ease';
     icon.style.opacity = 0;
+
+    if (theme === 'light') {
+      metaThemeColor.setAttribute('content', '#ffffff');
+    } else {
+      metaThemeColor.setAttribute('content', '#000000');
+    }
 
     setTimeout(() => {
       icon.classList.toggle('fa-moon', theme === 'light');

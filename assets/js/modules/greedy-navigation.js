@@ -56,7 +56,7 @@ function initResponsiveNav() {
       addClass(hlinks, 'hidden');
     }
 
-    btn.setAttribute('count', breaks.length);
+    btn.setAttribute('data-count', breaks.length);
   }
 
   function toggleMenu() {

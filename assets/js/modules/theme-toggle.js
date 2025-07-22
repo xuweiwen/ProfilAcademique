@@ -17,8 +17,10 @@ function initThemeToggle() {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     
-    moonIcon.classList.toggle('visible', isLight);
-    sunIcon.classList.toggle('visible', !isLight);
+    // moonIcon.classList.toggle('visible', isLight);
+    // sunIcon.classList.toggle('visible', !isLight);
+    moonIcon.classList.toggle('visible', theme === 'light');
+    sunIcon.classList.toggle('visible', theme === 'dark');
 
     moonIcon.style.opacity = isLight ? 1 : 0;
     sunIcon.style.opacity = isLight ? 0 : 1;

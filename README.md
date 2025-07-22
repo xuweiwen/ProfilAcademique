@@ -25,7 +25,7 @@ This project is licensed under the MIT License. See [`LICENSE`](LICENSE.txt) for
 This website uses and references the following open-source projects, each licensed separately:
 
 - [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) by Yi Ren, licensed under the MIT License.
-- [Font Awesome 6](https://fontawesome.com/) by Fonticons, Inc., fonts licensed under the SIL OFL 1.1 License, code licensed under the MIT License.
+- [Font Awesome 7](https://fontawesome.com/) by Fonticons, Inc., icons licensed under the CC BY 4.0 License, code licensed under the MIT License.
 - [Smooth Scroll Plugin](https://github.com/kswedberg/jquery-smooth-scroll) by Karl Swedberg, licensed under the MIT License.
 - [Greedy Navigation](https://github.com/lukejacksonn/GreedyNav) by Luke Jackson, licensed under the MIT License.
 

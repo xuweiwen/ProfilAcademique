@@ -9,25 +9,21 @@ function initThemeToggle() {
 
   const metaThemeColor = document.querySelector('meta[name="theme-color"]');
   const themeToggle = document.getElementById('theme-toggle');
-  const icon = themeToggle.querySelector('svg');
+  const moonIcon = document.getElementById('icon-moon');
+  const sunIcon = document.getElementById('icon-sun');
 
   function setTheme(theme) {
+    const isLight = theme === 'light';
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    icon.style.transition = 'opacity 0.3s ease';
-    icon.style.opacity = 0;
+    
+    moonIcon.classList.toggle('visible', isLight);
+    sunIcon.classList.toggle('visible', !isLight);
 
-    if (theme === 'light') {
-      metaThemeColor.setAttribute('content', '#ffffff');
-    } else {
-      metaThemeColor.setAttribute('content', '#000000');
-    }
+    moonIcon.style.opacity = isLight ? 1 : 0;
+    sunIcon.style.opacity = isLight ? 0 : 1;
 
-    setTimeout(() => {
-      icon.classList.toggle('fa-moon', theme === 'light');
-      icon.classList.toggle('fa-sun', theme === 'dark');
-      icon.style.opacity = 1;
-    }, 100);
+    metaThemeColor.setAttribute('content', isLight ? '#ffffff' : '#000000');
   }
   
   // Toggle theme on button click
@@ -42,7 +38,7 @@ function initThemeToggle() {
   if (saved) {
     setTheme(saved);
   } else {
-    // Optional: match system preference
+    // Match system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setTheme(prefersDark ? 'dark' : 'light');
   }

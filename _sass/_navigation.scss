@@ -42,12 +42,30 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 0;
+    right: 0.3rem;
     padding: 0;
+    height: $type-size-1;
+    width: $type-size-1;
     background-color: transparent;
-    i {
-      font-size: $type-size-1;
-      color: var(--masthead-link-color);
+    .icon-wrapper {
+      height: 100%;
+      width: 100%;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: 100%;
+        transition: opacity 0.3s ease;
+        color: var(--masthead-link-color);
+        opacity: 0;
+        pointer-events: none;
+        &.visible {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
     }
   }
 

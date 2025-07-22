@@ -9,7 +9,7 @@ function initThemeToggle() {
 
   const metaThemeColor = document.querySelector('meta[name="theme-color"]');
   const themeToggle = document.getElementById('theme-toggle');
-  const icon = themeToggle.querySelector('i');
+  const icon = themeToggle.querySelector('svg');
 
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);

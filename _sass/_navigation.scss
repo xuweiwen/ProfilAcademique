@@ -27,7 +27,8 @@
   button {
     position: absolute;
     height: 80%;
-    top: .2rem;
+    top: 50%;
+    transform: translateY(-50%);
     right: 2.5rem;
     padding: 0 .5rem;
     border: 0;
@@ -39,9 +40,6 @@
   }
 
   .button--theme {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     right: 0.3rem;
     padding: 0;
     height: $type-size-1;

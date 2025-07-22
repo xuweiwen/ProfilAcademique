@@ -22,10 +22,19 @@ function initThemeToggle() {
     moonIcon.classList.toggle('visible', theme === 'light');
     sunIcon.classList.toggle('visible', theme === 'dark');
 
-    moonIcon.style.opacity = isLight ? 1 : 0;
-    sunIcon.style.opacity = isLight ? 0 : 1;
+    // moonIcon.style.opacity = isLight ? 1 : 0;
+    // sunIcon.style.opacity = isLight ? 0 : 1;
 
-    metaThemeColor.setAttribute('content', isLight ? '#ffffff' : '#000000');
+    // metaThemeColor.setAttribute('content', isLight ? '#ffffff' : '#000000');
+    if (theme === 'light') {
+      moonIcon.style.opacity = 1;
+      sunIcon.style.opacity = 0;
+      metaThemeColor.setAttribute('content', '#ffffff');
+    } else {
+      moonIcon.style.opacity = 0;
+      sunIcon.style.opacity = 1;
+      metaThemeColor.setAttribute('content', '#000000');
+    }
   }
   
   // Toggle theme on button click

@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[See a live example](https://weixu.xyz/ProfilAcademique)
+[See a live example](https://weixu.net/ProfilAcademique)
 
 ## Features
 

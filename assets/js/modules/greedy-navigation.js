@@ -13,10 +13,12 @@
 
 function initResponsiveNav() {
   const nav = document.getElementById('site-nav');
+  if (!nav) return;
   const btntheme = nav.querySelector('#theme-toggle');
   const btn = nav.querySelector('#dropdown-menu');
   const vlinks = nav.querySelector('.visible-links');
   const hlinks = nav.querySelector('.hidden-links');
+  if (!btntheme || !btn || !vlinks || !hlinks) return;
 
   let breaks = [];
   let isMenuOpen = false;
@@ -27,7 +29,7 @@ function initResponsiveNav() {
   const removeClass = (el, cls) => el.classList.remove(cls);
   const toggleClass = (el, cls) => el.classList.toggle(cls);
 
-  function updateNav() {
+  const updateNav = () => {
     const btnHidden = hasClass(btn, 'hidden');
     const availableSpace = btnHidden
       ? nav.offsetWidth - btntheme.offsetWidth
@@ -57,21 +59,21 @@ function initResponsiveNav() {
     }
 
     btn.setAttribute('data-count', breaks.length);
-  }
+  };
 
-  function toggleMenu() {
+  const toggleMenu = () => {
     toggleClass(hlinks, 'hidden');
     toggleClass(btn, 'close');
     isMenuOpen = !hasClass(hlinks, 'hidden');
-  }
+  };
 
-  function closeMenu() {
+  const closeMenu = () => {
     if (isMenuOpen) {
       addClass(hlinks, 'hidden');
       removeClass(btn, 'close');
       isMenuOpen = false;
     }
-  }
+  };
 
   // Event listeners
   window.addEventListener('resize', updateNav);

@@ -6,28 +6,23 @@
  */
 
 function initAuthorInfo() {
-  var stickySideBar = function() {
-    var button = document.querySelector('.author__urls-wrapper button');
-    var show = button === null ? window.innerWidth > 925 : !button.offsetParent;
+  const authorUrls = document.querySelector('.author__urls');
+  const stickySideBar = () => {
+    const button = document.querySelector('.author__urls-wrapper button');
+    const show = button === null ? window.innerWidth > 925 : !button.offsetParent;
     
-    if (show) {
-      document.querySelector('.author__urls').style.display = 'block';
-    } else {
-      document.querySelector('.author__urls').style.display = 'none';
+    if (authorUrls) {
+      authorUrls.style.display = show ? 'block' : 'none';
     }
   };
-    
+  
   stickySideBar();
-    
-  window.addEventListener('resize', function() {
-    stickySideBar();
-  });
-    
-  // Follow menu drop down
-  var button = document.querySelector('.author__urls-wrapper button');
+  
+  window.addEventListener('resize', stickySideBar);
+  
+  const button = document.querySelector('.author__urls-wrapper button');
   if (button) {
-    button.addEventListener('click', function() {
-      var authorUrls = document.querySelector('.author__urls');
+    button.addEventListener('click', () => {
       if (authorUrls) {
         authorUrls.style.display = authorUrls.style.display === 'none' || authorUrls.style.display === '' ? 'block' : 'none';
       }

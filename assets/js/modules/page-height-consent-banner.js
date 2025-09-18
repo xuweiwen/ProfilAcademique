@@ -7,33 +7,22 @@
 
 function initPageHeightAdj() {
   const banner = document.getElementById('cookie-consent-banner');
-  var bumpIt = function() {
+  const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const bumpIt = () => {
     if (banner && banner.style.display !== 'none') {
-      var bannerHeight = banner.offsetHeight;
-      document.body.style.marginBottom = bannerHeight + 'px';
+      const bannerHeight = banner.offsetHeight;
+      document.body.style.marginBottom = (bannerHeight + 0.3 * remInPx) + 'px';
     } else {
       document.body.style.marginBottom = '0';
     }
   };
-
-  let didResize = false;
-  // Handle resize events
-  window.addEventListener('resize', function () {
-    didResize = true;
-  });
-  // Polling to check for resize
-  setInterval(function () {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }
-  }, 250);
-
   if (banner) {
     const observer = new MutationObserver(bumpIt);
     observer.observe(banner, { attributes: true, attributeFilter: ['style', 'class'] });
   }
   bumpIt();
+  window.addEventListener('resize', bumpIt);
+  window.addEventListener('orientationchange', bumpIt);
 }
 
 export { initPageHeightAdj };

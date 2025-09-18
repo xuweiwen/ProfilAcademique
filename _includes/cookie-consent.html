@@ -11,45 +11,54 @@
 
 <script>
   // Check if user already consented
-  function checkConsent() {
+  const checkConsent = () => {
+    const banner = document.getElementById('cookie-consent-banner');
     try {
       if (localStorage.getItem('cookie-consent') === 'accepted') {
         loadGoogleAnalytics(); // If consented earlier, load GA
       } else {
-        document.getElementById('cookie-consent-banner').style.display = 'block'; // Show banner
+        banner.style.display = 'block'; // Show banner
       }
     } catch (e) {
       console.warn("localStorage not available");
     }
-  }
+  };
 
   // Load Google Analytics after consent
-  function loadGoogleAnalytics() {
+  const loadGoogleAnalytics = () => {
     const script = document.createElement('script');
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}`;
     document.head.appendChild(script);
 
-    script.onload = function () {
+    script.onload = () => {
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      const gtag = (...args) => dataLayer.push(...args);
       gtag('js', new Date());
       gtag('config', "{{ site.google_analytics_id }}");
     };
-  }
+  };
 
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('cookie-consent-banner');
+    if (!banner) return;
+    const acceptBtn = document.getElementById('cookie-consent-accept');
+    const declineBtn = document.getElementById('cookie-consent-decline');
     // Accept button click event
-    document.getElementById('cookie-consent-accept').addEventListener('click', function() {
-      localStorage.setItem('cookie-consent', 'accepted'); // Store consent
-      document.getElementById('cookie-consent-banner').style.display = 'none'; // Hide banner
-      loadGoogleAnalytics(); // Load Google Analytics
-    });
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookie-consent', 'accepted'); // Store consent
+        banner.style.display = 'none'; // Hide banner
+        loadGoogleAnalytics(); // Load Google Analytics
+      });
+    }
 
     // Decline button click event
-    document.getElementById('cookie-consent-decline').addEventListener('click', function() {
-      document.getElementById('cookie-consent-banner').style.display = 'none'; // Hide banner
-    });
+    if (declineBtn) {
+      declineBtn.addEventListener('click', () => {
+        banner.style.display = 'none'; // Hide banner
+      });
+    }
 
     // Run consent check
     checkConsent();

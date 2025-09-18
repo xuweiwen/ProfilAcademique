@@ -8,7 +8,7 @@
 import { initPageHeightAdj, initAuthorInfo, initResponsiveNav, initCollapsibleSections, initThemeToggle } from './modules/index.js';
 import { initMoveFocusSkipLink, initShowNotice } from './utils/index.js';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
 
   initPageHeightAdj();
   initMoveFocusSkipLink('skip-link-main-content');

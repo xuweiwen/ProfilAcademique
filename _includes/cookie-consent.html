@@ -28,14 +28,14 @@
   const loadGoogleAnalytics = () => {
     const script = document.createElement('script');
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}`;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}';
     document.head.appendChild(script);
 
     script.onload = () => {
       window.dataLayer = window.dataLayer || [];
-      const gtag = (...args) => dataLayer.push(...args);
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', "{{ site.google_analytics_id }}");
+      gtag('config', '{{ site.google_analytics_id }}');
     };
   };
 

@@ -9,12 +9,12 @@ function initThemeToggle() {
 
   const metaThemeColor = document.querySelector('meta[name="theme-color"]');
   const themeToggle = document.getElementById('theme-toggle');
-  const moonIcon = document.getElementById('icon-moon');
-  const sunIcon = document.getElementById('icon-sun');
-  if (!metaThemeColor || !themeToggle || !moonIcon || !sunIcon) return;
+  if (!metaThemeColor || !themeToggle) return;
 
   const setTheme = (theme) => {
     const isLight = theme === 'light';
+    const moonIcon = document.getElementById('icon-moon');
+    const sunIcon = document.getElementById('icon-sun');
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     

@@ -5,11 +5,12 @@
  * See LICENSE file for full license text.
  */
 
-import { initPageHeightAdj, initAuthorInfo, initResponsiveNav, initCollapsibleSections, initThemeToggle } from './modules/index.js';
+import { initCookieConsent, initPageHeightAdj, initAuthorInfo, initResponsiveNav, initCollapsibleSections, initThemeToggle } from './modules/index.js';
 import { initMoveFocusSkipLink, initShowNotice } from './utils/index.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  initCookieConsent();
   initPageHeightAdj();
   initMoveFocusSkipLink('skip-link-main-content');
   initAuthorInfo();

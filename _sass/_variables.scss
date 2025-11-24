@@ -86,7 +86,7 @@ $googlescholar-color        : #4d90fe;
   --background-color-emph     : #{$lighter-gray};
   --link-color                : #{$info-color};
   --link-color-hover          : #{darken($info-color, 15%)};
-  --box-shadow                : 3px 3px 6px #{$gray};
+  --box-shadow                : 3px 3px 6px 0px #{$gray};
 }
 
 [data-theme="dark"] {

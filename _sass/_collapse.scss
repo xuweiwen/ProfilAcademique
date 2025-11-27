@@ -24,12 +24,13 @@
 
   .header {
     background-color: var(--link-color);
+    font-size: $type-size-6;
     border-radius: $border-radius;
     color: #fff;
-    padding: 0.2rem 1rem;
-    margin-left: 0;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    margin-left: 1rem;
     cursor: pointer;
-    font-weight: bold;
     display: inline-block;
     width: auto;
   }
@@ -38,5 +39,12 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
+    margin-bottom: $space-var;
+    ul {
+      margin-bottom: 0;
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }

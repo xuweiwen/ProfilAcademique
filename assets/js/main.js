@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAuthorInfo();
   initResponsiveNav();
   initThemeToggle();
-  initCollapsibleSections({expandedLabel: ' - show', collapsedLabel: ' - hide'});
+  initCollapsibleSections({expandedLabel: '&rtrif; ', collapsedLabel: '&dtrif; '});
   initShowNotice();
   
 });

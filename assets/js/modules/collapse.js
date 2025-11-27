@@ -5,25 +5,25 @@
  * See LICENSE file for full license text.
  */
 
-function initCollapsibleSections({expandedLabel = ' - show', collapsedLabel = ' - hide'} = {}) {
+function initCollapsibleSections({expandedLabel = '&rtrif; ', collapsedLabel = '&dtrif; '} = {}) {
   document.querySelectorAll('.header').forEach(header => {
     const content = header.nextElementSibling;
+    if (!content) return;
 
-    content.style.maxHeight = '0';
-    content.style.overflow = 'hidden';
+    const originalText = header.textContent.trim();
+    header.innerHTML = expandedLabel + originalText;
 
-    header.textContent = header.textContent + expandedLabel;
+    content.dataset.expanded = 'false';
 
     header.addEventListener('click', () => {
-      const isExpanded = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+      const isExpanded = content.dataset.expanded === 'true';
 
-      if (isExpanded) {
-        content.style.maxHeight = '0';
-        header.textContent = header.textContent.replace(collapsedLabel, expandedLabel); // reset to expanded
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        header.textContent = header.textContent.replace(expandedLabel, collapsedLabel); // change to collapsed
-      }
+      content.dataset.expanded = (!isExpanded).toString();
+
+      header.innerHTML = (isExpanded ? expandedLabel : collapsedLabel) + originalText;
+      content.style.maxHeight = isExpanded
+        ? '0px'
+        : content.scrollHeight + 'px';
     });
   });
 }

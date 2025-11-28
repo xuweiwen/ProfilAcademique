@@ -23,15 +23,9 @@
   }
 
   .header {
-    background-color: var(--link-color);
-    font-size: $type-size-6;
-    border-radius: $border-radius;
-    color: #fff;
-    padding-left: 0.4em;
-    padding-right: 0.4em;
+    @include button-base;
+    padding: 0 0.4em;
     margin-left: 1rem;
-    cursor: pointer;
-    display: inline-block;
     width: auto;
   }
 

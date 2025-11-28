@@ -10,6 +10,7 @@
   /* default button */
   @include button-base;
   padding: 0.5em 1em;
+  margin-bottom: 0.25em;
 
   /* extra large button */
   &--x-large {

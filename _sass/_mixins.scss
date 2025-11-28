@@ -101,7 +101,6 @@
 
 @mixin button-base {
   display: inline-block;
-  margin-bottom: 0.25em;
   color: var(--btn-text-color);
   font-family: $sans-serif;
   font-size: $type-size-6;

@@ -5,7 +5,7 @@
  * See LICENSE file for full license text.
  */
 
-import { initCookieConsent, initPageHeightAdj, initAuthorInfo, initResponsiveNav, initCollapsibleSections, initThemeToggle } from './modules/index.js';
+import { initCookieConsent, initPageHeightAdj, initAuthorInfo, initResponsiveNav, initCollapsibleSections, initThemeToggle, initModals } from './modules/index.js';
 import { initMoveFocusSkipLink, initShowNotice } from './utils/index.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,5 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initCollapsibleSections({expandedLabel: '&rtrif; ', collapsedLabel: '&dtrif; '});
   initShowNotice();
+  initModals();
   
 });

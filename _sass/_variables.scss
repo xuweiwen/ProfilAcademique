@@ -77,27 +77,33 @@ $xing-color                 : #C6F16D;
 $googlescholar-color        : #4d90fe;
 
 :root {
-  --text-color                : #{$dark-gray};
-  --background-color          : #fff;
-  --border-color              : #{$lighter-gray};
-  --code-background-color     : #fafafa;
-  --masthead-link-color       : #{$gray};
-  --masthead-link-color-hover : #{$dark-gray};
-  --background-color-emph     : #{$lighter-gray};
-  --link-color                : #{$info-color};
-  --link-color-hover          : #{darken($info-color, 15%)};
-  --box-shadow                : 3px 3px 6px 0px #{$gray};
+  --text-color                 : #{$dark-gray};
+  --background-color           : #fff;
+  --border-color               : #{$lighter-gray};
+  --code-background-color      : #fafafa;
+  --masthead-link-color        : #{$gray};
+  --masthead-link-color-hover  : #{$dark-gray};
+  --background-color-emph      : #{$lighter-gray};
+  --link-color                 : #{$info-color};
+  --link-color-hover           : #{darken($info-color, 15%)};
+  --box-shadow                 : 3px 3px 6px 0px #{$gray};
+  --btn-text-color             : #fff;
+  --btn-background-color       : #{$dark-gray};
+  --btn-background-color-hover : #{$darker-gray};
 }
 
 [data-theme="dark"] {
-  --text-color                : #{$light-gray};
-  --background-color          : #000;
-  --border-color              : #{$darker-gray};
-  --code-background-color     : #050505;
-  --masthead-link-color-hover : #{$light-gray};
-  --background-color-emph     : #{$darker-gray};
-  --link-color                : #{lighten($info-color, 22%)};
-  --link-color-hover          : #{lighten($info-color, 37%)};
+  --text-color                 : #{$light-gray};
+  --background-color           : #000;
+  --border-color               : #{$darker-gray};
+  --code-background-color      : #050505;
+  --masthead-link-color-hover  : #{$light-gray};
+  --background-color-emph      : #{$darker-gray};
+  --link-color                 : #{lighten($info-color, 22%)};
+  --link-color-hover           : #{lighten($info-color, 37%)};
+  --btn-text-color             : #000;
+  --btn-background-color       : #{$light-gray};
+  --btn-background-color-hover : #{$lighter-gray};
 }
 
 /*

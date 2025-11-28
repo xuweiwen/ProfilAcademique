@@ -1,0 +1,43 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+/*
+   Default button
+   ========================================================================== */
+
+.btn {
+  /* default button */
+  display: inline-block;
+  margin-bottom: 0.25em;
+  padding: 0.5em 1em;
+  color: var(--btn-text-color);
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  //font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--btn-background-color);
+  border: 0;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--btn-background-color-hover);
+  }
+
+  /* extra large button */
+  &--x-large {
+    font-size: $type-size-4;
+  }
+
+  /* large button */
+  &--large {
+    font-size: $type-size-5;
+  }
+
+  /* small button */
+  &--small {
+    font-size: $type-size-7;
+  }
+}

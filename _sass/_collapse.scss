@@ -6,7 +6,7 @@
    Usage:
 
    <div class="collapse">
-   <div class="header">Title</div>
+   <button class="header">Title</button>
    <div class="content" markdown="1">
 
    content
@@ -26,7 +26,6 @@
     @include button-base;
     padding: 0 0.4em;
     margin-left: 1rem;
-    width: auto;
   }
 
   .content {

@@ -11,6 +11,8 @@
   @include button-base;
   padding: 0.5em 1em;
   margin-bottom: 0.25em;
+  text-align: center;
+  text-decoration: none;
 
   /* extra large button */
   &--x-large {

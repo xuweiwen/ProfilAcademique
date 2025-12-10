@@ -1,6 +1,6 @@
 # [ProfilAcademique](https://github.com/xuweiwen/ProfilAcademique)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/xuweiwen/ProfilAcademique/blob/master/LICENSE.txt) [![Built with Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-55b8d3.svg)](https://jekyllrb.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/xuweiwen/ProfilAcademique/blob/master/LICENSE) [![Built with Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-55b8d3.svg)](https://jekyllrb.com/)
 
 **ProfilAcademique** is a clean and responsive static website template designed for academics, researchers, and professionals to showcase their profile, publications, and projects.
 
@@ -18,7 +18,7 @@
 
 ## License
 
-This project is licensed under the MIT License. See [`LICENSE`](LICENSE.txt) for full details.
+This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for full details.
 
 ### Third-party Components
 

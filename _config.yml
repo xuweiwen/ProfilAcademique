@@ -22,13 +22,13 @@ baidu_site_verification  : # get baidu_site_verification from https://ziyuan.bai
 # Site Author
 author:
   locale           : "en-US"
-  name             : "Profil Academique"
+  name             : "A. N. Other"
   avatar           : "/images/avatar.jpg"
   bio              : "A website template"
-  location         : "City, Country"
+  location         : "City, State"
   employer         :
   googlescholar    : "google-scholar-id-placeholder"
-  email            : "example@example.com"
+  email            : "email@example.com"
   researchgate     :
   uri              :
   bitbucket        :

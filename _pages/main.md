@@ -11,37 +11,38 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 
 ## <i class="fa-solid fa-fire" style="color: #eb6a14;"></i> News {#news}
 
-- [[Month] [Year]] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-- [[Month] [Year]] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+- [Month Year] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+- [Month Year] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
 
 ## <i class="fa-solid fa-graduation-cap" style="color: #73b54a"></i> Education {#education}
 
-- Ph.D. in [Major], [University Name], [Start Year]-[End Year]
-- B.S. in [Major], [University Name], [Start Year]-[End Year]
+- [Degree] in [Program], [University], [Start Year] &ndash; [End Year]
+- [Degree] in [Program], [University], [Start Year] &ndash; [End Year]
 
 ## <i class="fa-solid fa-file-lines" style="color: #3485cb"></i> Publications {#publications}
 
 <div class="paper-box">
 <div class="paper-box-image">
 <div markdown="1">
-<div class="badge-image">[Conference] [Year]</div>
+<div class="badge-image">[Venue] [Year]</div>
 ![Paper cover]({{ "/images/publication-teaser/example-image.png" | relative_url }})
 </div>
 </div>
 <div class="paper-box-text" markdown="1">
 
 [Paper title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.](https://ieeexplore.ieee.org)<br>
-**[1st author]**, [2nd author], [3rd author]<br>
-[Conference], [Year]<br>
+**[A. N. Other]**, [Co-author], [Co-author]<br>
+[Venue], [Year]<br>
 [[arXiv](https://arxiv.org)] [[Code](https://github.com)]
 
 </div>
 </div>
 
-- <span class="badge-text">[Conference] [Year]</span> [Paper title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.](https://ieeexplore.ieee.org)<br>
-**[1st author]**, [2nd author], [3rd author]<br>
-[Conference], [Year]
+- <span class="badge-text">[Venue] [Year]</span> [Paper title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.](https://ieeexplore.ieee.org)<br>
+**[A. N. Other]**, [Co-author], [Co-author]<br>
+[Venue], [Year]
 
 ## <i class="fa-solid fa-gear" style="color: #ffbf00"></i> Services {#services}
 
+- *[Role]*, [Committee], [Year]
 - *[Role]*, [Conference/Journal], [Year]

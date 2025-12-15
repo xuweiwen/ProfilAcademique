@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Profil Academique"
+title                    : "ProfilAcademique"
 description              : "A modern, academic-themed personal website template."
 url                      : "https://www.weixu.net" # URL of the site, adjust as needed
 baseurl                  : "/ProfilAcademique" # Base URL for the site, adjust if hosted in a subdirectory

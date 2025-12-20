@@ -1,8 +1,6 @@
 ---
 title: ""
 permalink: /
-redirect_from: 
-  - /main/
 ---
 
 <span class="anchor" id="about-me"></span>

@@ -16,4 +16,4 @@ main:
     url: "/#services"
 
   - title: "Features"
-    url: "/features"
+    url: "/features/"

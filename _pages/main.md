@@ -71,9 +71,10 @@ $$
 
 ### Footnote
 
-Footnote example[^1].
+Footnote example[^1]. Another footnote example[^2].
 
-[^1]: This is a footnote.
+[^1]: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+[^2]: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 ### Code
 

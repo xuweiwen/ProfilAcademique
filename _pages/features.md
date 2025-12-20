@@ -1,6 +1,6 @@
 ---
 title: Features
-permalink: /features.html
+permalink: /features/
 ---
 
 ## <i class="fa-solid fa-chalkboard icon-color-pink"></i> Features
@@ -21,6 +21,14 @@ Footnote example[^1]. Another footnote example[^2].
 
 [^1]: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 [^2]: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+### Table
+
+| Header1 | Header2 | Header3 |
+|:--------|:-------:|:-------:|
+| cell11  | cell12  | cell13  |
+| cell21  | cell22  | cell23  |
+| cell31  | cell32  | cell33  |
 
 ### Code
 

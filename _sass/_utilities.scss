@@ -193,22 +193,27 @@ body:hover .visually-hidden button {
   }
 }
 
+.icon-color-red svg,
 .icon-color-red {
   color: #ff1d25;
 }
 
+.icon-color-green svg,
 .icon-color-green {
   color: #7ac943;
 }
 
+.icon-color-blue svg,
 .icon-color-blue {
   color: #3fa9f5;
 }
 
+.icon-color-yellow svg,
 .icon-color-yellow {
   color: #ff931e;
 }
 
+.icon-color-pink svg,
 .icon-color-pink {
   color: #ff7bac;
 }
@@ -295,8 +300,8 @@ body:hover .visually-hidden button {
    ========================================================================== */
 
 .well {
-  padding: 1.5rem;
-  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
   background-color: var(--background-color-emph);
   border: 1px solid var(--text-color);
   border-radius: $border-radius;

@@ -64,6 +64,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 Inline equation example is like $E = m c^2$.
 
 Block equation example:
+
 $$
 \int_{-\infty}^\infty e^{-x^2} \, \mathrm{d} x = \sqrt{\pi}.
 $$
@@ -79,6 +80,7 @@ Footnote example[^1].
 Inline code example is like `x`.
 
 Block code block example:
+
 ```python
 # my first code
 def hello():

@@ -106,77 +106,6 @@ body:hover .visually-hidden button {
 
 
 /*
-   Type
-   ========================================================================== */
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
-.text-nowrap {
-  white-space: nowrap;
-}
-
-
-/*
-   Images
-   ========================================================================== */
-
-/* image align left */
-
-.align-left {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  @include breakpoint($small) {
-    float: left;
-    margin-right: 1em;
-  }
-}
-
-/* image align right */
-
-.align-right {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  @include breakpoint($small) {
-    float: right;
-    margin-left: 1em;
-  }
-}
-
-/* image align center */
-
-.align-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* file page content container */
-
-.full {
-  @include breakpoint($large){
-    margin-right: -20% !important;
-  }
-}
-
-/*
    Icons
    ========================================================================== */
 
@@ -262,6 +191,26 @@ body:hover .visually-hidden button {
   .fa-google-scholar {
     color: $googlescholar-color;
   }
+}
+
+.icon-color-red {
+  color: #ff1d25;
+}
+
+.icon-color-green {
+  color: #7ac943;
+}
+
+.icon-color-blue {
+  color: #3fa9f5;
+}
+
+.icon-color-yellow {
+  color: #ff931e;
+}
+
+.icon-color-pink {
+  color: #ff7bac;
 }
 
 
@@ -462,14 +411,4 @@ a.reversefootnote {
   &:hover {
     text-decoration: underline;
   }
-}
-
-
-/*
-   Required
-   ========================================================================== */
-
-.required {
-  color: $danger-color;
-  font-weight: bold;
 }

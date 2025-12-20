@@ -87,11 +87,19 @@ def hello():
     print("Hello, world!")
 ```
 
+### Notice
+
+<p><a href="#" class="show-notice-link" data-target="notice-id">Click here</a> to show a notice block.</p>
+<div id="notice-id" class="notice" markdown="1">
+#### Title
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+</div>
+
 ### Well
 
 <div class="well">
-  <h4>Important</h4>
-  <p>This is a "well" section.</p>
+  <h4>Title</h4>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 </div>
 
 ### Modal
@@ -101,8 +109,8 @@ def hello():
 <div id="overlay"></div>
 
 <div id="modal-id" class="modal">
-  <h4 class="modal__title">Important</h4>
-  <div class="modal__supporting-text">Content for modal.</div>
+  <h4 class="modal__title">Title</h4>
+  <div class="modal__supporting-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
   <div class="modal__actions">
     <button data-modal-close class="btn">Close</button>
   </div>

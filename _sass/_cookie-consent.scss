@@ -25,17 +25,8 @@
   }
 
   button {
-    background-color: $info-color;
-    color: #fff;
+    @include button-base(#fff, $info-color, darken($info-color, 15%));
     padding: .5em .75em;
-    border: none;
-    cursor: pointer;
     margin: .5em 1em 0 1em;
-    border-radius: $border-radius;
-    font-size: 1em;
-
-    &:hover {
-      background-color: darken($info-color, 15%);
-    }
   }
 }

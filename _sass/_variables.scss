@@ -14,25 +14,14 @@ $indent-var                 : .5em;
 $space-var                  : .5em;
 
 /* system typefaces */
-$serif                      : Georgia, Times, serif;
-$sans-serif                 : Helvetica, Arial, sans-serif;
+$font-serif                 : serif;
+$font-sans-serif            : system-ui, sans-serif;
+$font-monospace             : ui-monospace, monospace;
 
-$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
-
-/* sans serif typefaces */
-$sans-serif-narrow          : $sans-serif;
-$helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
-
-/* serif typefaces */
-$georgia                    : Georgia, serif;
-$times                      : Times, serif;
-$bodoni                     : "Bodoni MT", serif;
-$calisto                    : "Calisto MT", serif;
-$garamond                   : Garamond, serif;
-
-$global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
-$caption-font-family        : $serif;
+$global-font-family         : $font-sans-serif;
+$header-font-family         : $font-sans-serif;
+$caption-font-family        : $font-serif;
+$code-font-family           : $font-monospace;
 
 /* type scale, scale ratio : 1.125 */
 $type-size-1                : 1.602em; // 24.027px

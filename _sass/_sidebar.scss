@@ -29,11 +29,11 @@
 
   h3, h4, h5, h6 {
     margin-bottom: 0;
-    font-family: $sans-serif-narrow;
+    font-family: $global-font-family;
   }
 
   p, li {
-    font-family: $sans-serif;
+    font-family: $global-font-family;
     font-size: $type-size-5;
     line-height: 1.5;
   }
@@ -115,7 +115,7 @@
   @include breakpoint($medium) {
     font-size: $type-size-2;
   }
-  font-family: $sans-serif;
+  font-family: $global-font-family;
   font-size: $type-size-3;
 }
 
@@ -132,7 +132,7 @@
   position: relative;
   display: table-cell;
   vertical-align: middle;
-  font-family: $sans-serif;
+  font-family: $global-font-family;
   z-index: 10;
   position: relative;
   cursor: pointer;

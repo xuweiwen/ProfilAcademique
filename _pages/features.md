@@ -24,11 +24,35 @@ Footnote example[^1]. Another footnote example[^2].
 
 ### Table
 
-| Header1 | Header2 | Header3 |
-|:--------|:-------:|:-------:|
-| cell11  | cell12  | cell13  |
-| cell21  | cell22  | cell23  |
-| cell31  | cell32  | cell33  |
+| Header 1 | Header 2 | Header 3 |
+|:---------|:--------:|:--------:|
+| cell 11  | cell 12  | cell 13  |
+| cell 21  | cell 22  | cell 23  |
+| cell 31  | cell 32  | cell 33  |
+
+### Figure
+
+<figure class="third">
+  <a href="https://example.com">
+    <img src="/images/publication-teaser/example-image.png" alt="(a)">
+  </a>
+  <a href="https://example.com">
+    <img src="/images/publication-teaser/example-image.png" alt="(b)">
+  </a>
+  <a href="https://example.com">
+    <img src="/images/publication-teaser/example-image.png" alt="(c)">
+  </a>
+  <figcaption>
+    The subfigures can be clickable.
+  </figcaption>
+</figure>
+
+### Video
+
+<figure>
+  <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" title="Me at the zoo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <figcaption>Responsive video embed.</figcaption>
+</figure>
 
 ### Code
 

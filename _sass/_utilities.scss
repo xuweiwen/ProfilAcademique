@@ -361,12 +361,12 @@ body:hover .visually-hidden button {
   border-radius: $border-radius;
   box-shadow: var(--box-shadow);
 
-  &__title {
+  > h4 {
     margin: 0;
     padding: 0.5em 1em;
   }
 
-  &__supporting-text {
+  > p {
     padding: 0 1em 0.5em 1em;
   }
 

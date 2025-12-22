@@ -34,17 +34,15 @@ Footnote example[^1]. Another footnote example[^2].
 
 <figure class="third">
   <a href="https://example.com">
-    <img src="/images/publication-teaser/example-image.png" alt="(a)">
+    <img src="{{ '/images/publication-teaser/example-image.png' | relative_url }}" alt="(a)">
   </a>
   <a href="https://example.com">
-    <img src="/images/publication-teaser/example-image.png" alt="(b)">
+    <img src="{{ '/images/publication-teaser/example-image.png' | relative_url }}" alt="(a)">
   </a>
   <a href="https://example.com">
-    <img src="/images/publication-teaser/example-image.png" alt="(c)">
+    <img src="{{ '/images/publication-teaser/example-image.png' | relative_url }}" alt="(a)">
   </a>
-  <figcaption>
-    The subfigures can be clickable.
-  </figcaption>
+  <figcaption>The subfigures can be clickable.</figcaption>
 </figure>
 
 ### Video
@@ -76,9 +74,9 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 ### Well
 
-<div class="well">
-  <h4>Title</h4>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<div class="well" markdown="1">
+#### Title
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 </div>
 
 ### Modal
@@ -87,10 +85,10 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 <div id="overlay"></div>
 
-<div id="modal-id" class="modal">
-  <h4 class="modal__title">Title</h4>
-  <div class="modal__supporting-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
-  <div class="modal__actions">
-    <button data-modal-close class="btn">Close</button>
-  </div>
+<div id="modal-id" class="modal" markdown="1">
+#### Title
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+<div class="actions">
+<button data-modal-close class="btn">Close</button>
+</div>
 </div>

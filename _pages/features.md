@@ -88,7 +88,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 <div id="modal-id" class="modal" markdown="1">
 #### Title
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-<div class="actions">
+<div class="modal__actions">
 <button data-modal-close class="btn">Close</button>
 </div>
 </div>

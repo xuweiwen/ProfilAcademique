@@ -9,7 +9,7 @@ function initVideoAspectRatio() {
   document.querySelectorAll('figure iframe').forEach(iframe => {
     const w = iframe.width || 16;
     const h = iframe.height || 9;
-    iframe.style.paddingBottom = `${w} / ${h}`;
+    iframe.style.aspectRatio = `${w} / ${h}`;
   });
 }
 

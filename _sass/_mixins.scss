@@ -102,7 +102,6 @@
 @mixin button-base($color: var(--btn-text-color), $bg: var(--btn-background-color), $bg-hover: var(--btn-background-color-hover)) {
   display: inline-block;
   color: $color;
-  font-family: $global-font-family;
   font-size: $type-size-6;
   background-color: $bg;
   border: 0;

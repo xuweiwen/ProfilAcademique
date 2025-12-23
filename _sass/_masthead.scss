@@ -14,7 +14,7 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
 
     @include breakpoint($x-large) {
       max-width: $x-large;

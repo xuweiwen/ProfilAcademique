@@ -44,8 +44,8 @@
 }
 
 @mixin notice($notice-color) {
-  margin: .2em 0;
-  padding: .4em 1em;
+  margin: 0.2em 0;
+  padding: 0.4em 1em;
   text-indent: initial;
   background-color: mix(#fff, $notice-color, 90%);
   border-radius: $border-radius;

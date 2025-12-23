@@ -10,8 +10,8 @@ $doc-font-size              : 15px;
 
 /* paragraph format */
 $paragraph-indent           : false; // true, false (default)
-$indent-var                 : .5em;
-$space-var                  : .5em;
+$indent-var                 : 0.5em;
+$space-var                  : 0.5em;
 
 /* system typefaces */
 $font-serif                 : serif;
@@ -29,9 +29,9 @@ $type-size-2                : 1.424em; // 21.357px
 $type-size-3                : 1.266em; // 18.984px
 $type-size-4                : 1.125em; // 16.875px
 $type-size-5                : 1em; // 15px
-$type-size-6                : .889em; // 13.333px
-$type-size-7                : .79em; // 11.852px
-$type-size-8                : .702em; // 10.535px
+$type-size-6                : 0.889em; // 13.333px
+$type-size-7                : 0.79em; // 11.852px
+$type-size-8                : 0.702em; // 10.535px
 
 /*
    Colors
@@ -119,7 +119,7 @@ $grid-gap                   : 1rem;
    ========================================================================== */
 
 $scroll_offset              : 4.25rem;
-$border-radius              : .25rem;
+$border-radius              : 0.25rem;
 $navicon-width              : 1rem;
-$navicon-height             : .2rem;
-$global-transition          : all .2s ease-in-out;
+$navicon-height             : 0.2rem;
+$global-transition          : all 0.2s ease-in-out;

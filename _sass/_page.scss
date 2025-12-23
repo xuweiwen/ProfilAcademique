@@ -167,7 +167,7 @@
   padding-right: 1.1em;
   position: absolute;
   margin-top: $space-var * 2;
-  margin-left: -.8em;
+  margin-left: -0.8em;
   color: #fff;
   background-color: var(--link-color);
   border-radius: $border-radius;
@@ -175,8 +175,8 @@
 }
 
 .badge-text {
-  padding-left: .4em;
-  padding-right: .4em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
   color: #fff;
   background-color: var(--link-color);
   font-size: $type-size-6;

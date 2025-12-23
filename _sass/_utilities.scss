@@ -75,7 +75,7 @@ body:hover .visually-hidden button {
 
   display: flex;
   gap: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   background: $lighter-gray;
   border-radius: $border-radius;
   box-shadow: var(--box-shadow);
@@ -90,7 +90,7 @@ body:hover .visually-hidden button {
 
   a {
     color: #fff;
-    padding: .5rem;
+    padding: 0.5rem;
     background: $primary-color;
     font-size: $type-size-5;
     text-decoration: none;

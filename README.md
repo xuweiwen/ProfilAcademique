@@ -14,7 +14,7 @@
 - Built-in light/dark mode toggle for better accessibility
 - Fully responsive and optimized for mobile devices
 - Cookie consent banner for privacy compliance
-- Modernized codebase with outdated dependencies removed (as of 2025)
+- Modernized codebase with outdated dependencies removed (as of 2026)
 
 ## License
 

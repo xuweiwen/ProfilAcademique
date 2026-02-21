@@ -129,7 +129,7 @@
     }
     img {
       width: 100%;
-      max-width: 400px;
+      max-width: 300px;
       box-shadow: var(--box-shadow);
       object-fit: cover;
       border-radius: $border-radius;
@@ -145,15 +145,15 @@
   @include breakpoint($medium) {
     .paper-box-image{
       justify-content: left;
-      min-width: 200px;
-      max-width: 35%;
+      min-width: 195px;
+      max-width: 30%;
       order: 1;
     }
       
     .paper-box-text{
       justify-content: left;
       padding-left: 2em;
-      max-width: 65%;
+      max-width: 70%;
       order: 2;
       p {
         margin: $space-var 0;

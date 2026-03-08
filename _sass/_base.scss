@@ -209,14 +209,19 @@ hr {
 
 /* lists */
 
-ul li,
-ol li {
+ul > li,
+ol > li {
   margin-bottom: $space-var;
 }
 
-li ul,
-li ol {
-  margin-top: $space-var;
+li > ul,
+li > ol {
+  margin-top: 0;
+}
+
+li > ul > li,
+li > ol > li {
+  margin-bottom: 0;
 }
 
 /* media and embeds */

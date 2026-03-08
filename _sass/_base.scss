@@ -72,7 +72,7 @@ ins {
   }
 }
 
-ul {
+ul, ol {
   padding-inline-start: 2em;
   margin-block-start: $space-var;
   margin-block-end: $space-var;
@@ -217,6 +217,7 @@ ol > li {
 li > ul,
 li > ol {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 li > ul > li,
@@ -319,13 +320,13 @@ nav {
   }
 
   /* override white-space for nested lists */
-  ul li,
-  ol li {
+  ul > li,
+  ol > li {
     margin-bottom: 0;
   }
 
-  li ul,
-  li ol {
+  li > ul,
+  li > ol {
     margin-top: 0;
   }
 }

@@ -29,7 +29,7 @@ function initPageHeightAdj() {
       const bannerHeight = banner.offsetHeight;
       document.body.style.marginBottom = (bannerHeight + 0.3 * remInPx) + 'px';
       if (backToTop) {
-        backToTop.style.bottom = (isNarrow ? bannerHeight + 0.3 * remInPx + baseOffset : baseOffset) + 'px';
+        backToTop.style.bottom = (isNarrow ? bannerHeight + remInPx : baseOffset) + 'px';
       }
     } else {
       document.body.style.marginBottom = '0';

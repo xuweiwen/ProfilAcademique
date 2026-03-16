@@ -458,4 +458,10 @@ a.reversefootnote {
   &:hover {
     background: color-mix(in srgb, var(--background-color) 90%, transparent);
   }
+
+  svg {
+    width: 1em;
+    height: 1em;
+    display: block;
+  }
 }

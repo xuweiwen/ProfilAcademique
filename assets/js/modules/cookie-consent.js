@@ -6,7 +6,8 @@
  */
 
 function initCookieConsent() {
-  const GA_ID = document.querySelector('meta[name="google-analytics-id"]').content;
+  const metaGA = document.querySelector('meta[name="google-analytics-id"]');
+  const GA_ID = metaGA?.content || '';
   const banner = document.getElementById('cookie-consent-banner');
   const acceptBtn = document.getElementById('cookie-consent-accept');
   const declineBtn = document.getElementById('cookie-consent-decline');

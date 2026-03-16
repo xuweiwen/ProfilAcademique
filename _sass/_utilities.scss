@@ -423,7 +423,6 @@ a.reversefootnote {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
-
   width: 2.5rem;
   height: 2.5rem;
 
@@ -440,20 +439,7 @@ a.reversefootnote {
   font-size: $type-size-5;
 
   z-index: 9400;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-
-  pointer-events: none;
-
   transition: $global-transition;
-
-  &.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
 
   &:hover {
     background: color-mix(in srgb, var(--background-color) 90%, transparent);

@@ -7,8 +7,9 @@
 
 function initBackToTop() {
   const btn = document.getElementById('back-to-top');
+  if (!btn) return;
   function toggleButton() {
-    btn.classList.toggle('show', window.scrollY > 400);
+    btn.classList.toggle('hidden', window.scrollY <= 400);
   }
   window.addEventListener('scroll', toggleButton);
   toggleButton();

@@ -5,7 +5,7 @@
  * See LICENSE file for full license text.
  */
 
-import { initCookieConsent, initPageHeightAdj, initAuthorInfo, initResponsiveNav, initThemeToggle, initExternalLinks, initCollapsibleSections, initModals, initVideoAspectRatio } from './modules/index.js';
+import { initCookieConsent, initPageHeightAdj, initAuthorInfo, initResponsiveNav, initThemeToggle, initExternalLinks, initCollapsibleSections, initModals, initVideoAspectRatio, initBackToTop } from './modules/index.js';
 import { initMoveFocusSkipLink, initShowNotice } from './utils/index.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,5 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initShowNotice();
   initModals();
   initVideoAspectRatio();
+  initBackToTop();
 
 });

@@ -34,6 +34,25 @@ $type-size-7                : 0.79em; // 11.852px
 $type-size-8                : 0.702em; // 10.535px
 
 /*
+   Breakpoints
+   ========================================================================== */
+
+$small                      : 600px !default;
+$medium                     : 768px !default;
+$medium-wide                : 900px !default;
+$large                      : 925px !default;
+$x-large                    : 1280px !default;
+
+/*
+   Grid
+   ========================================================================== */
+
+$number-of-columns          : 48;
+$number-of-columns-page     : 37;
+$number-of-columns-sidebar  : 9;
+$grid-gap                   : 1rem;
+
+/*
    Colors
    ========================================================================== */
 
@@ -66,6 +85,7 @@ $xing-color                 : #C6F16D;
 $googlescholar-color        : #4d90fe;
 
 :root {
+  --x-large                    : #{$x-large};
   --text-color                 : #{$dark-gray};
   --background-color           : #fff;
   --border-color               : #{$lighter-gray};
@@ -94,25 +114,6 @@ $googlescholar-color        : #4d90fe;
   --btn-background-color       : #{$light-gray};
   --btn-background-color-hover : #{$lighter-gray};
 }
-
-/*
-   Breakpoints
-   ========================================================================== */
-
-$small                      : 600px !default;
-$medium                     : 768px !default;
-$medium-wide                : 900px !default;
-$large                      : 925px !default;
-$x-large                    : 1280px !default;
-
-/*
-   Grid
-   ========================================================================== */
-
-$number-of-columns          : 48;
-$number-of-columns-page     : 37;
-$number-of-columns-sidebar  : 9;
-$grid-gap                   : 1rem;
 
 /*
    Other

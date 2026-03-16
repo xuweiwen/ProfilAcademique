@@ -413,3 +413,49 @@ a.reversefootnote {
     text-decoration: underline;
   }
 }
+
+
+/*
+   Back to top button
+   ========================================================================== */
+
+#back-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: $border-radius;
+  border: 1px solid var(--text-color);
+  background: color-mix(in srgb, var(--background-color) 50%, transparent);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: $type-size-5;
+
+  z-index: 9400;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  pointer-events: none;
+
+  transition: $global-transition;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  &:hover {
+    background: color-mix(in srgb, var(--background-color) 90%, transparent);
+  }
+}

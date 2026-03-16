@@ -9,14 +9,16 @@ function initPageHeightAdj() {
   const banner = document.getElementById('cookie-consent-banner');
   const backToTop = document.getElementById('back-to-top');
   const rootStyle = getComputedStyle(document.documentElement);
-  const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const remInPx = parseFloat(rootStyle.fontSize);
   const xLarge = parseFloat(rootStyle.getPropertyValue('--x-large'));
-  const baseOffset = 2 * remInPx;
+  let baseOffset = 0;
   let buttonExtraWidth = 0;
   if (backToTop) {
     const btnStyle = getComputedStyle(backToTop);
     const btnWidth = parseFloat(btnStyle.width);
     const btnRight = parseFloat(btnStyle.right);
+    const btnBottom = parseFloat(btnStyle.bottom);
+    baseOffset = btnBottom;
     buttonExtraWidth = btnWidth + btnRight + remInPx;
   }
   const bumpIt = () => {
@@ -24,8 +26,8 @@ function initPageHeightAdj() {
     const widthThreshold = xLarge + 2 * buttonExtraWidth;
     const isNarrow = windowWidth <= widthThreshold;
     const isNarrower = windowWidth <= xLarge;
-
-    if (banner && banner.style.display !== 'none') {
+    const bannerVisible = banner && getComputedStyle(banner).display !== 'none';
+    if (bannerVisible) {
       const bannerHeight = banner.offsetHeight;
       document.body.style.marginBottom = (bannerHeight + 0.3 * remInPx) + 'px';
       if (backToTop) {

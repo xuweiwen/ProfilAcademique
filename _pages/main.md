@@ -24,8 +24,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 
 ## <i class="fa-solid fa-graduation-cap icon-color-green"></i> Education {#education}
 
-- [Degree] in [Program], [University], [Start Year] &ndash; [End Year]
-- [Degree] in [Program], [University], [Start Year] &ndash; [End Year]
+- [Degree] in [Program], [University], [Start Year]&ndash;[End Year]
+- [Degree] in [Program], [University], [Start Year]&ndash;[End Year]
 
 ## <i class="fa-solid fa-file-lines icon-color-blue"></i> Publications {#publications}
 

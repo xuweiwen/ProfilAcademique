@@ -7,7 +7,7 @@
    ========================================================================== */
 
 .sidebar {
-  transform: translate3d(0, 0 , 0);
+  transform: translate3d(0, 0, 0);
   margin-bottom: 1em;
 
   @include breakpoint($large) {

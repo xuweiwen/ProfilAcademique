@@ -29,7 +29,7 @@ function initPageHeightAdj() {
     const bannerVisible = banner && getComputedStyle(banner).display !== 'none';
     if (bannerVisible) {
       const bannerHeight = banner.offsetHeight;
-      document.body.style.marginBottom = (bannerHeight + 0.3 * remInPx) + 'px';
+      document.body.style.marginBottom = (bannerHeight + 0.5 * remInPx) + 'px';
       if (backToTop) {
         backToTop.style.bottom = (isNarrow ? bannerHeight + remInPx : baseOffset) + 'px';
       }

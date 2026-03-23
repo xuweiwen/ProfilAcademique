@@ -141,6 +141,7 @@
       transform: rotate(45deg);
       border-left: 1px solid var(--border-color);
       border-top: 1px solid var(--border-color);
+      clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
     }
 
     li {

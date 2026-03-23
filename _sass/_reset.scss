@@ -36,7 +36,7 @@ textarea {
 
 ::selection {
   color: var(--background-color);
-  background: var(--text-color);
+  background-color: var(--text-color);
 }
 
 /* Prevents modern browsers from displaying 'audio' without controls */

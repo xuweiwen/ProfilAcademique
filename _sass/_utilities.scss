@@ -55,7 +55,7 @@ body:hover .visually-hidden button {
   display: block;
   font-size: 1em;
   font-weight: bold;
-  background: var(--background-color);
+  background-color: var(--background-color);
   z-index: 10000;
   text-decoration: none;
   box-shadow: var(--box-shadow);
@@ -76,7 +76,7 @@ body:hover .visually-hidden button {
   display: flex;
   gap: 1rem;
   padding: 0.5rem;
-  background: $lighter-gray;
+  background-color: $lighter-gray;
   border-radius: $border-radius;
   box-shadow: var(--box-shadow);
   opacity: 0;
@@ -91,14 +91,14 @@ body:hover .visually-hidden button {
   a {
     color: #fff;
     padding: 0.5rem;
-    background: $primary-color;
+    background-color: $primary-color;
     font-size: $type-size-5;
     text-decoration: none;
     border-radius: $border-radius;
     transition: $global-transition;
 
     &:focus {
-      background: var(--link-color);
+      background-color: var(--link-color);
     }
   }
 }
@@ -222,7 +222,7 @@ body:hover .visually-hidden button {
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
-  background: var(--background-color);
+  background-color: var(--background-color);
   margin: auto;
   transition: 0.3s;
 
@@ -233,7 +233,7 @@ body:hover .visually-hidden button {
     left: 0;
     width: $navicon-width;
     height: $navicon-height;
-    background: var(--background-color);
+    background-color: var(--background-color);
     transition: 0.3s;
   }
 
@@ -248,7 +248,7 @@ body:hover .visually-hidden button {
 
 .close .navicon {
   /* hide the middle line*/
-  background: transparent;
+  background-color: transparent;
 
   /* overlay the lines by setting both their top values to 0*/
   &:before, &:after{
@@ -340,7 +340,7 @@ body:hover .visually-hidden button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--background-color);
+  background-color: var(--background-color);
   opacity: 0.85;
   z-index: 8500;
 }
@@ -355,7 +355,7 @@ body:hover .visually-hidden button {
   transform: translate(-50%, -50%);
   min-height: 0;
   z-index: 9000;
-  background: var(--background-color);
+  background-color: var(--background-color);
   border: 1px solid var(--text-color);
   border-radius: $border-radius;
   box-shadow: var(--box-shadow);
@@ -431,8 +431,9 @@ a.reversefootnote {
   justify-content: center;
 
   border-radius: $border-radius;
-  border: 1px solid var(--text-color);
-  background: color-mix(in srgb, var(--background-color) 50%, transparent);
+  border: 1px solid var(--border-color);
+  background-color: color-mix(in srgb, var(--background-color) 50%, transparent);
+  backdrop-filter: var(--glass-effect);
   box-shadow: var(--box-shadow);
   color: var(--text-color);
   text-decoration: none;
@@ -442,7 +443,7 @@ a.reversefootnote {
   transition: $global-transition;
 
   &:hover {
-    background: color-mix(in srgb, var(--background-color) 90%, transparent);
+    background-color: color-mix(in srgb, var(--background-color) 90%, transparent);
   }
 
   svg {

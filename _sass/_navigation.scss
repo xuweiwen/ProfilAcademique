@@ -9,7 +9,6 @@
 .greedy-nav {
   position: relative;
   min-width: 250px;
-  background: var(--background-color);
 
   a {
     display: block;
@@ -98,7 +97,7 @@
         left: 0;
         bottom: 0;
         height: 4px;
-        background: var(--masthead-link-color-hover);
+        background-color: var(--masthead-link-color-hover);
         width: 100%;
         transition: $global-transition;
         transform: scaleX(0); /* hide*/
@@ -118,7 +117,7 @@
     padding: 5px;
     border: 1px solid var(--border-color);
     border-radius: $border-radius;
-    background: var(--background-color);
+    background-color: var(--background-color);
     box-shadow: var(--box-shadow);
 
     a {
@@ -127,34 +126,21 @@
 
       &:hover {
         color: var(--masthead-link-color-hover);
-        background: var(--background-color-emph);
+        background-color: var(--background-color-emph);
       }
     }
 
-    &:before {
+    &::before {
       content: "";
       position: absolute;
-      top: -11px;
-      right: 36px;
-      width: 0;
-      border-style: solid;
-      border-width: 0 10px 10px;
-      border-color: var(--border-color) transparent;
-      display: block;
-      z-index: 0;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: -10px;
-      right: 36px;
-      width: 0;
-      border-style: solid;
-      border-width: 0 10px 10px;
-      border-color: var(--background-color) transparent;
-      display: block;
-      z-index: 1;
+      top: -8px;
+      right: 39px;
+      width: 16px;
+      height: 16px;
+      background-color: inherit;
+      transform: rotate(45deg);
+      border-left: 1px solid var(--border-color);
+      border-top: 1px solid var(--border-color);
     }
 
     li {

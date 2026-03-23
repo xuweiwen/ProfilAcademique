@@ -6,8 +6,7 @@
   @include divider();
   position: sticky;
   top: 0;
-  background-color: color-mix(in srgb, var(--background-color) 80%, transparent);
-  backdrop-filter: var(--glass-effect);
+  background-color: var(--background-color);
   animation: $global-animation;
   animation-delay: 0.15s;
   z-index: 20;

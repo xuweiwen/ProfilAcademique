@@ -4,9 +4,9 @@
 
 @keyframes intro {
   from {
-    filter: blur(16px);
+    opacity: 0;
   }
   to {
-    filter: blur(0);
+    opacity: 1;
   }
 }

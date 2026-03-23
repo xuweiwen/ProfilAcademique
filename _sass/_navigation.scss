@@ -116,8 +116,7 @@
     padding: 5px;
     border: 1px solid var(--border-color);
     border-radius: $border-radius;
-    background-color: color-mix(in srgb, var(--background-color) 80%, transparent);
-    backdrop-filter: var(--glass-effect);
+    background-color: var(--background-color);
     box-shadow: var(--box-shadow);
 
     a {
@@ -126,7 +125,7 @@
 
       &:hover {
         color: var(--masthead-link-color-hover);
-        background-color: color-mix(in srgb, var(--background-color-emph) 80%, transparent);
+        background-color: var(--background-color-emph);
       }
     }
 
@@ -138,7 +137,6 @@
       width: 16px;
       height: 16px;
       background-color: inherit;
-      backdrop-filter: inherit;
       transform: rotate(45deg);
       border-left: 1px solid var(--border-color);
       border-top: 1px solid var(--border-color);

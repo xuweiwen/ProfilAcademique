@@ -148,19 +148,10 @@
     clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
   }
 
-  ul > li,
-  ol > li {
-    margin-bottom: 0;
-  }
-
-  li > ul,
-  li > ol {
-    margin-top: 0;
-  }
-
   li {
     display: block;
     border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0;
 
     &:last-child {
       border-bottom: none;

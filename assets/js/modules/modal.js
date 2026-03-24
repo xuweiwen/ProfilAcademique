@@ -14,8 +14,12 @@ function initModals() {
     btn.addEventListener('click', () => {
       const modalId = btn.dataset.modalOpen;
       const modal = document.getElementById(modalId);
+      if (!modal) return;
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
       modal.classList.add('active');
       body.classList.add('show-modal');
+      body.classList.add('overflow-hidden');
+      body.style.paddingRight = scrollbarWidth + 'px';
     });
   });
 
@@ -27,6 +31,8 @@ function initModals() {
       // hide overlay if no other modals are active
       if (document.querySelectorAll('.modal.active').length === 0) {
         body.classList.remove('show-modal');
+        body.classList.remove('overflow-hidden');
+        body.style.paddingRight = '';
       }
     });
   });

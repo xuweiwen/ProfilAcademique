@@ -110,9 +110,8 @@
 
 .hidden-links {
   position: fixed;
-  top: 56px;
+  top: 58px;
   right: 21px;
-  margin-top: 15px;
   border: 1px solid var(--border-color);
   border-radius: $border-radius;
   background-color: color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent);

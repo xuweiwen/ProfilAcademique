@@ -432,7 +432,7 @@ a.reversefootnote {
 
   border-radius: $border-radius;
   border: 1px solid var(--border-color);
-  background-color: color-mix(in srgb, var(--background-color) 40%, transparent);
+  background-color: color-mix(in srgb, var(--background-color) var(--color-mix-percentage-trans), transparent);
   backdrop-filter: var(--glass-effect);
   box-shadow: var(--box-shadow);
   color: var(--text-color);
@@ -443,7 +443,7 @@ a.reversefootnote {
   transition: $global-transition;
 
   &:hover {
-    background-color: color-mix(in srgb, var(--background-color) 80%, transparent);
+    background-color: color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent);
   }
 
   svg {

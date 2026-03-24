@@ -15,7 +15,6 @@
     margin-right: 2rem;
     padding: 0.5rem 0;
     color: var(--masthead-link-color);
-    text-decoration: none;
 
     &:hover {
       color: var(--masthead-link-color-hover);
@@ -107,48 +106,64 @@
       }
     }
   }
+}
 
-  .hidden-links {
+.hidden-links {
+  position: fixed;
+  top: 56px;
+  right: 21px;
+  margin-top: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: $border-radius;
+  background-color: color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent);
+  backdrop-filter: var(--glass-effect);
+  box-shadow: var(--box-shadow);
+  z-index: 30;
+
+  a {
+    display: block;
+    color: var(--masthead-link-color);
+    margin: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--masthead-link-color-hover);
+      background-color: var(--background-color-emph);
+    }
+  }
+
+  &::before {
+    content: "";
     position: absolute;
-    top: 100%;
-    right: 0.4rem;
-    margin-top: 15px;
-    border: 1px solid var(--border-color);
-    border-radius: $border-radius;
-    background-color: var(--background-color);
-    box-shadow: var(--box-shadow);
+    top: -8px;
+    right: 38px;
+    width: 16px;
+    height: 16px;
+    background-color: inherit;
+    backdrop-filter: inherit;
+    transform: rotate(45deg);
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  }
 
-    a {
-      margin: 0;
-      padding: 10px 20px;
+  ul > li,
+  ol > li {
+    margin-bottom: 0;
+  }
 
-      &:hover {
-        color: var(--masthead-link-color-hover);
-        background-color: var(--background-color-emph);
-      }
-    }
+  li > ul,
+  li > ol {
+    margin-top: 0;
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: -8px;
-      right: 38px;
-      width: 16px;
-      height: 16px;
-      background-color: inherit;
-      transform: rotate(45deg);
-      border-left: 1px solid var(--border-color);
-      border-top: 1px solid var(--border-color);
-      clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-    }
+  li {
+    display: block;
+    border-bottom: 1px solid var(--border-color);
 
-    li {
-      display: block;
-      border-bottom: 1px solid var(--border-color);
-
-      &:last-child {
-        border-bottom: none;
-      }
+    &:last-child {
+      border-bottom: none;
     }
   }
 }

@@ -88,6 +88,8 @@ $googlescholar-color        : #4d90fe;
   --x-large                    : #{$x-large};
   --text-color                 : #{$dark-gray};
   --background-color           : #fff;
+  --color-mix-percentage-trans : 20%;
+  --color-mix-percentage       : 80%;
   --glass-effect               : saturate(150%) blur(10px);
   --border-color               : #{$lighter-gray};
   --code-background-color      : #fafafa;
@@ -105,6 +107,8 @@ $googlescholar-color        : #4d90fe;
 [data-theme="dark"] {
   --text-color                 : #{$light-gray};
   --background-color           : #000;
+  --color-mix-percentage-trans : 15%;
+  --color-mix-percentage       : 70%;
   --glass-effect               : saturate(180%) blur(12px);
   --border-color               : #{$darker-gray};
   --code-background-color      : #050505;

@@ -17,8 +17,9 @@ function initResponsiveNav() {
   const btntheme = nav.querySelector('#theme-toggle');
   const btn = nav.querySelector('#dropdown-menu');
   const vlinks = nav.querySelector('.visible-links');
-  const hlinks = nav.querySelector('.hidden-links');
-  if (!btntheme || !btn || !vlinks || !hlinks) return;
+  if (!btntheme || !btn || !vlinks) return;
+  const hlinks = document.getElementById('hidden-links');
+  if (!hlinks) return;
 
   let breaks = [];
   let isMenuOpen = false;

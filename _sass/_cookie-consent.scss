@@ -12,7 +12,8 @@
   max-width: $x-large;
   border-radius: $border-radius;
   box-shadow: var(--box-shadow);
-  background-color: $dark-gray;
+  background-color: color-mix(in srgb, $dark-gray var(--color-mix-percentage), transparent);
+  backdrop-filter: var(--glass-effect);
   color: #fff;
   padding: 0.5em;
   text-align: center;

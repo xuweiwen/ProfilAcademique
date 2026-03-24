@@ -6,7 +6,7 @@
   @include divider();
   position: sticky;
   top: 0;
-  background: linear-gradient(
+  background-image: linear-gradient(
     to bottom,
     var(--background-color) 0%,
     color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent) 60%,

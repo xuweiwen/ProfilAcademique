@@ -5,7 +5,7 @@
  * See LICENSE file for full license text.
  */
 
-function initCollapsibleSections({expandedLabel = '&rtrif; ', collapsedLabel = '&dtrif; '} = {}) {
+function initCollapsibleSections({expandLabel = '&rtrif; ', collapseLabel = '&dtrif; '} = {}) {
   const sections = [];
   document.querySelectorAll('.header').forEach(header => {
     const content = header.nextElementSibling;
@@ -13,13 +13,13 @@ function initCollapsibleSections({expandedLabel = '&rtrif; ', collapsedLabel = '
     sections.push({ content });
 
     const originalText = header.textContent.trim();
-    header.innerHTML = expandedLabel + originalText;
+    header.innerHTML = expandLabel + originalText;
 
     header.addEventListener('click', () => {
       content.classList.toggle('expanded');
       const isExpanded = content.classList.contains('expanded');
 
-      header.innerHTML = (isExpanded ? collapsedLabel : expandedLabel) + originalText;
+      header.innerHTML = (isExpanded ? collapseLabel : expandLabel) + originalText;
       content.style.maxHeight = isExpanded
         ? content.scrollHeight + 'px'
         : '0px';

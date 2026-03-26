@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initResponsiveNav();
   initThemeToggle();
   initExternalLinks();
-  initCollapsibleSections({expandedLabel: '&rtrif; ', collapsedLabel: '&dtrif; '});
+  initCollapsibleSections({expandLabel: '&rtrif; ', collapseLabel: '&dtrif; '});
   initShowNotice();
   initModals();
   initVideoAspectRatio();

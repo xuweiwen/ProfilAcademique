@@ -19,7 +19,7 @@ function initCollapsibleSections({expandedLabel = '&rtrif; ', collapsedLabel = '
       content.classList.toggle('expanded');
       const isExpanded = content.classList.contains('expanded');
 
-      header.innerHTML = (isExpanded ? expandedLabel : collapsedLabel) + originalText;
+      header.innerHTML = (isExpanded ? collapsedLabel : expandedLabel) + originalText;
       content.style.maxHeight = isExpanded
         ? content.scrollHeight + 'px'
         : '0px';

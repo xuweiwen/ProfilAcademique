@@ -6,24 +6,31 @@
  */
 
 function initCollapsibleSections({expandedLabel = '&rtrif; ', collapsedLabel = '&dtrif; '} = {}) {
+  const sections = [];
   document.querySelectorAll('.header').forEach(header => {
     const content = header.nextElementSibling;
     if (!content) return;
+    sections.push({ content });
 
     const originalText = header.textContent.trim();
     header.innerHTML = expandedLabel + originalText;
 
-    content.dataset.expanded = 'false';
-
     header.addEventListener('click', () => {
-      const isExpanded = content.dataset.expanded === 'true';
-
-      content.dataset.expanded = (!isExpanded).toString();
+      content.classList.toggle('expanded');
+      const isExpanded = content.classList.contains('expanded');
 
       header.innerHTML = (isExpanded ? expandedLabel : collapsedLabel) + originalText;
       content.style.maxHeight = isExpanded
-        ? '0px'
-        : content.scrollHeight + 'px';
+        ? content.scrollHeight + 'px'
+        : '0px';
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    sections.forEach(({ content }) => {
+      if (content.classList.contains('expanded')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
     });
   });
 }

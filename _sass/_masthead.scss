@@ -17,48 +17,13 @@
   animation-delay: 0.15s;
   z-index: 20;
 
-  &__inner-wrap {
+  &__inner {
     @include container;
     @include clearfix;
-    padding: 0.5em 1em;
+    padding: 0.5rem 1rem;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
-    }
-
-    nav {
-      z-index: 10;
-    }
-
-    a {
-      text-decoration: none;
-    }
-  }
-
-  &__menu {
-
-    ul {
-      margin: 0;
-      padding: 0;
-      clear: both;
-      list-style-type: none;
-    }
-
-    &-home-item {
-      display: none !important;
-      @include breakpoint($medium) {
-        display: block !important;
-      }
-    }
-
-    &-item {
-      display: block;
-      list-style-type: none;
-      white-space: nowrap;
-
-      &--lg {
-        padding-right: 2em;
-      }
     }
   }
 }

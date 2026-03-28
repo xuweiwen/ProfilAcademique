@@ -1,25 +1,23 @@
 <div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="{{ '/' | relative_url }}">Homepage</a></li>
-          {% for link in site.data.navigation.main %}
-            <li class="masthead__menu-item"><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <button id="dropdown-menu" aria-label="Dropdown menu"><span class="navicon"></span></button>
-        <button id="theme-toggle" class="button--theme" aria-label="Toggle theme mode">
-          <span class="icon-wrapper">
-            <i id="icon-moon" class="fa-solid fa-moon"></i>
-            <i id="icon-sun" class="fa-solid fa-sun"></i>
-          </span>
-        </button>
-      </nav>
-    </div>
+  <div class="masthead__inner">
+    <nav id="site-nav" class="nav-bar">
+      <div class="home-item">
+        <a href="{{ '/' | relative_url }}">Homepage</a>
+      </div>
+      <button id="dropdown-menu" class="button-dropdown" aria-label="Dropdown menu"><span class="navicon"></span></button>
+      <ul class="nav-links">
+        {% for link in site.data.navigation.main %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <button id="theme-toggle" class="button-theme" aria-label="Toggle theme mode">
+        <span class="icon-wrapper">
+          <i id="icon-moon" class="fa-solid fa-moon"></i>
+          <i id="icon-sun" class="fa-solid fa-sun"></i>
+        </span>
+      </button>
+    </nav>
   </div>
 </div>
 
-<div class="masthead__menu">
-  <ul id="hidden-links" class="hidden-links hidden"></ul>
-</div>
+<div id="dropdown-overlay" class="dropdown-overlay"></div>

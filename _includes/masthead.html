@@ -4,13 +4,13 @@
       <div class="home-item">
         <a href="{{ '/' | relative_url }}">Homepage</a>
       </div>
-      <button id="dropdown-menu" class="button-dropdown" aria-label="Dropdown menu"><span class="navicon"></span></button>
+      <button id="dropdown-menu" class="button--dropdown" aria-label="Dropdown menu"><span class="navicon"></span></button>
       <ul class="nav-links">
         {% for link in site.data.navigation.main %}
           <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
         {% endfor %}
       </ul>
-      <button id="theme-toggle" class="button-theme" aria-label="Toggle theme mode">
+      <button id="theme-toggle" class="button--theme" aria-label="Toggle theme mode">
         <span class="icon-wrapper">
           <i id="icon-moon" class="fa-solid fa-moon"></i>
           <i id="icon-sun" class="fa-solid fa-sun"></i>

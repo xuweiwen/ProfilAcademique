@@ -13,30 +13,21 @@ function initThemeToggle() {
 
   const setTheme = (theme) => {
     const isLight = theme === 'light';
-    const moonIcon = document.getElementById('icon-moon');
-    const sunIcon = document.getElementById('icon-sun');
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    
-    moonIcon.classList.toggle('visible', isLight);
-    sunIcon.classList.toggle('visible', !isLight);
-
     metaThemeColor.setAttribute('content', isLight ? '#ffffff' : '#000000');
   };
   
-  // Toggle theme on button click
   themeToggle.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
   });
   
-  // Set theme on load
   const saved = localStorage.getItem('theme');
   if (saved) {
     setTheme(saved);
   } else {
-    // Match system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setTheme(prefersDark ? 'dark' : 'light');
   }

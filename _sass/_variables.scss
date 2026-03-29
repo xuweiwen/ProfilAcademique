@@ -121,6 +121,12 @@ $googlescholar-color        : #4d90fe;
   --btn-background-color-hover : #{$lighter-gray};
 }
 
+.button--theme #icon-moon { opacity: 1; }
+.button--theme #icon-sun  { opacity: 0; }
+
+[data-theme="dark"] .button--theme #icon-moon { opacity: 0; }
+[data-theme="dark"] .button--theme #icon-sun  { opacity: 1; }
+
 /*
    Other
    ========================================================================== */

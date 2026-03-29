@@ -35,7 +35,7 @@ function initResponsiveNav() {
     }
     btnDropdown.classList.toggle('close', isMenuOpen);
     navLinks.classList.toggle('hidden', !isMenuOpen && !wideScreen);
-    dropdownOverlay.classList.toggle('inactive', !(isMenuOpen && !wideScreen));
+    dropdownOverlay.classList.toggle('hidden', !(isMenuOpen && !wideScreen));
   };
 
   const updateNav = () => {

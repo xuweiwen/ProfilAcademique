@@ -90,7 +90,7 @@
       @include divider();
       position: fixed;
       top: 100%;
-      width: calc(100% - 0.4rem);
+      width: 100%;
       transform: translateY(0.5px);
       padding: 0.5rem 0;
       flex-direction: column;
@@ -103,11 +103,11 @@
       &:before {
         content: "";
         position: absolute;
-        left: 0;
-        bottom: 2px;
+        left: 0.2rem;
+        bottom: 0;
         height: 4px;
         background-color: var(--masthead-link-color-hover);
-        width: 100%;
+        width: calc(100% - 0.4rem);
         transition: $global-transition;
         transform: scaleX(0);
       }

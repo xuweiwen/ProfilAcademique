@@ -21,9 +21,6 @@ function initThemeToggle() {
     moonIcon.classList.toggle('visible', isLight);
     sunIcon.classList.toggle('visible', !isLight);
 
-    moonIcon.style.opacity = isLight ? 1 : 0;
-    sunIcon.style.opacity = isLight ? 0 : 1;
-
     metaThemeColor.setAttribute('content', isLight ? '#ffffff' : '#000000');
   };
   

@@ -67,6 +67,12 @@ function initResponsiveNav() {
   window.addEventListener('resize', updateNav);
   window.addEventListener('scroll', closeMenu);
   btnDropdown.addEventListener('click', toggleMenu);
+  navLinks.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (link) {
+      closeMenu();
+    }
+  });
 
   updateNav();
 }

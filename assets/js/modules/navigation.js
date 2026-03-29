@@ -30,14 +30,8 @@ function initResponsiveNav() {
   let isMenuOpen = false;
   let wideScreen = true;
 
-  const updateMenuState = () => {
-    if (isMenuOpen) {
-      navLinks.classList.remove('hidden');
-      dropdownOverlay.style.maxHeight = navLinks.offsetHeight + 'px';
-    } else {
-      navLinks.classList.add('hidden');
-      dropdownOverlay.style.maxHeight = '0';
-    }
+  const updateOverlayHeight = () => {
+    dropdownOverlay.style.maxHeight = navLinks.offsetHeight + 'px';
   };
 
   const updateNav = () => {
@@ -45,34 +39,29 @@ function initResponsiveNav() {
     dropdownOverlay.style.top = mastheadHeight + 'px';
     const availableLR = (nav.offsetWidth - linkOrgWidth) / 2 - 2 * remInPx;
     wideScreen = availableLR >= homeWidth && availableLR >= btnThemeWidth;
-
-    if (wideScreen) {
-      btnDropdown.classList.add('hidden');
-      dropdownOverlay.classList.add('hidden');
-      homeItem.classList.remove('hidden');
-      navLinks.classList.remove('dropdown');
-      navLinks.classList.remove('hidden');
-    } else {
-      btnDropdown.classList.remove('hidden');
-      dropdownOverlay.classList.remove('hidden');
-      homeItem.classList.add('hidden');
-      navLinks.classList.add('dropdown');
-      updateMenuState();
+    if (!wideScreen) {
+      updateOverlayHeight();
     }
+    btnDropdown.classList.toggle('hidden', wideScreen);
+    homeItem.classList.toggle('hidden', !wideScreen);
+    navLinks.classList.toggle('dropdown', !wideScreen);
+    navLinks.classList.toggle('hidden', !(isMenuOpen && !wideScreen));
+    dropdownOverlay.classList.toggle('inactive', !(isMenuOpen && !wideScreen));
   };
 
   const toggleMenu = () => {
-    btnDropdown.classList.toggle('close');
-    isMenuOpen = btnDropdown.classList.contains('close');
-    updateMenuState();
+    isMenuOpen = !isMenuOpen;
+    btnDropdown.classList.toggle('close', isMenuOpen);
+    navLinks.classList.toggle('hidden', !isMenuOpen);
+    dropdownOverlay.classList.toggle('inactive', !isMenuOpen);
   };
 
   const closeMenu = () => {
     if (isMenuOpen && !wideScreen) {
-      navLinks.classList.add('hidden');
+      isMenuOpen = !isMenuOpen;
       btnDropdown.classList.remove('close');
-      dropdownOverlay.style.maxHeight = '0';
-      isMenuOpen = false;
+      navLinks.classList.add('hidden');
+      dropdownOverlay.classList.add('inactive');
     }
   };
 

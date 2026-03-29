@@ -9,7 +9,8 @@
 
   a {
     display: block;
-    padding: 0.5rem;
+    padding: 0.2rem;
+    margin: 0.3rem;
     color: var(--masthead-link-color);
     transition: none;
 
@@ -24,6 +25,9 @@
     top: 50%;
     transform: translateY(-50%);
     font-weight: bold;
+    a {
+      padding: 0.2rem 0;
+    }
   }
 
   button {

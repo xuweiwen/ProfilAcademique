@@ -14,8 +14,7 @@ function initResponsiveNav() {
   const navLinks = nav.querySelector('.nav-links');
   const dropdownOverlay = document.getElementById('dropdown-overlay');
   if (!btnTheme || !btnDropdown || !navLinks || !dropdownOverlay) return;
-  const rootStyle = getComputedStyle(document.documentElement);
-  const remInPx = parseFloat(rootStyle.fontSize);
+  const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
   const measure = () => {
     return {
@@ -30,8 +29,13 @@ function initResponsiveNav() {
   let isMenuOpen = false;
   let wideScreen = true;
 
-  const updateOverlayHeight = () => {
-    dropdownOverlay.style.maxHeight = navLinks.offsetHeight + 'px';
+  const applyMenuState = () => {
+    if (isMenuOpen && !wideScreen) {
+      dropdownOverlay.style.maxHeight = navLinks.offsetHeight + 'px';
+    }
+    btnDropdown.classList.toggle('close', isMenuOpen);
+    navLinks.classList.toggle('hidden', !isMenuOpen && !wideScreen);
+    dropdownOverlay.classList.toggle('inactive', !(isMenuOpen && !wideScreen));
   };
 
   const updateNav = () => {
@@ -39,29 +43,24 @@ function initResponsiveNav() {
     dropdownOverlay.style.top = mastheadHeight + 'px';
     const availableLR = (nav.offsetWidth - linkOrgWidth) / 2 - 2 * remInPx;
     wideScreen = availableLR >= homeWidth && availableLR >= btnThemeWidth;
-    if (!wideScreen) {
-      updateOverlayHeight();
+    if (wideScreen) {
+      isMenuOpen = false;
     }
     btnDropdown.classList.toggle('hidden', wideScreen);
     homeItem.classList.toggle('hidden', !wideScreen);
     navLinks.classList.toggle('dropdown', !wideScreen);
-    navLinks.classList.toggle('hidden', !(isMenuOpen && !wideScreen));
-    dropdownOverlay.classList.toggle('inactive', !(isMenuOpen && !wideScreen));
+    applyMenuState();
   };
 
   const toggleMenu = () => {
     isMenuOpen = !isMenuOpen;
-    btnDropdown.classList.toggle('close', isMenuOpen);
-    navLinks.classList.toggle('hidden', !isMenuOpen);
-    dropdownOverlay.classList.toggle('inactive', !isMenuOpen);
+    applyMenuState();
   };
 
   const closeMenu = () => {
     if (isMenuOpen && !wideScreen) {
-      isMenuOpen = !isMenuOpen;
-      btnDropdown.classList.remove('close');
-      navLinks.classList.add('hidden');
-      dropdownOverlay.classList.add('inactive');
+      isMenuOpen = false;
+      applyMenuState();
     }
   };
 

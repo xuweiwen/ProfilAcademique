@@ -27,7 +27,7 @@ function initPageHeightAdj() {
     const widthThresholdWindow = windowWidth <= xLargeSize? largeSize : xLargeSize;
     const widthThreshold = widthThresholdWindow + 2 * buttonExtraWidth;
     const isNarrow = windowWidth <= widthThreshold;
-    const isNarrower = windowWidth <= widthThresholdWindow;
+    const isNarrower = windowWidth <= (0.95 * widthThresholdWindow + 2 * remInPx);
     const bannerVisible = banner && getComputedStyle(banner).display !== 'none';
     if (bannerVisible) {
       const bannerHeight = banner.offsetHeight;

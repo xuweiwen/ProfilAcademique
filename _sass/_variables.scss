@@ -85,6 +85,7 @@ $xing-color                 : #C6F16D;
 $googlescholar-color        : #4d90fe;
 
 :root {
+  --large                      : #{$large};
   --x-large                    : #{$x-large};
   --text-color                 : #{$dark-gray};
   --background-color           : #fff;

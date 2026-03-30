@@ -10,7 +10,8 @@ function initPageHeightAdj() {
   const backToTop = document.getElementById('back-to-top');
   const rootStyle = getComputedStyle(document.documentElement);
   const remInPx = parseFloat(rootStyle.fontSize);
-  const xLarge = parseFloat(rootStyle.getPropertyValue('--x-large'));
+  const largeSize = parseFloat(rootStyle.getPropertyValue('--large'));
+  const xLargeSize = parseFloat(rootStyle.getPropertyValue('--x-large'));
   let baseOffset = 0;
   let buttonExtraWidth = 0;
   if (backToTop) {
@@ -23,9 +24,10 @@ function initPageHeightAdj() {
   }
   const bumpIt = () => {
     const windowWidth = window.innerWidth;
-    const widthThreshold = xLarge + 2 * buttonExtraWidth;
+    const widthThresholdWindow = windowWidth <= xLargeSize? largeSize : xLargeSize;
+    const widthThreshold = widthThresholdWindow + 2 * buttonExtraWidth;
     const isNarrow = windowWidth <= widthThreshold;
-    const isNarrower = windowWidth <= xLarge;
+    const isNarrower = windowWidth <= widthThresholdWindow;
     const bannerVisible = banner && getComputedStyle(banner).display !== 'none';
     if (bannerVisible) {
       const bannerHeight = banner.offsetHeight;

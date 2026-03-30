@@ -23,7 +23,7 @@ function initPageHeightAdj() {
     buttonExtraWidth = btnWidth + btnRight + remInPx;
   }
   const bumpIt = () => {
-    const windowWidth = window.innerWidth;
+    const windowWidth = document.documentElement.clientWidth;
     const widthThresholdWindow = windowWidth <= xLargeSize? largeSize : xLargeSize;
     const widthThreshold = widthThresholdWindow + 2 * buttonExtraWidth;
     const isNarrow = windowWidth <= widthThreshold;

@@ -20,15 +20,13 @@ function initPageHeightAdj() {
     const btnRight = parseFloat(btnStyle.right);
     const btnBottom = parseFloat(btnStyle.bottom);
     baseOffset = btnBottom;
-    buttonExtraWidth = btnWidth + btnRight + remInPx;
+    buttonExtraWidth = btnWidth + btnRight;
   }
   const bumpIt = () => {
     const windowInnerWidth = window.innerWidth;
-    const windowClientWidth = document.documentElement.clientWidth;
-    const widthThresholdWindow = windowInnerWidth <= xLargeSize? largeSize : xLargeSize;
+    const widthThresholdWindow = windowInnerWidth < xLargeSize? largeSize : xLargeSize;
     const widthThreshold = widthThresholdWindow + 2 * buttonExtraWidth;
     const isNarrow = windowInnerWidth <= widthThreshold;
-    const isNarrower = windowClientWidth <= (widthThresholdWindow + 4 * remInPx);
     const bannerVisible = banner && getComputedStyle(banner).display !== 'none';
     if (bannerVisible) {
       const bannerHeight = banner.offsetHeight;
@@ -40,7 +38,6 @@ function initPageHeightAdj() {
       document.body.style.marginBottom = '0';
       if (backToTop) backToTop.style.bottom = baseOffset + 'px';
     }
-    if (backToTop) backToTop.style.right = isNarrower ? 0.025 * windowInnerWidth + 'px' : '2rem';
   };
   if (banner) {
     const observer = new MutationObserver(bumpIt);

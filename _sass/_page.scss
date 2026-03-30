@@ -4,9 +4,9 @@
 
 #main {
   @include container;
-  margin-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   animation: $global-animation;
   animation-delay: 0.35s;
   

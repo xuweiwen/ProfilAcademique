@@ -3,12 +3,12 @@
    ========================================================================== */
 
 .cookie-consent-content {
-  @include container;
   position: fixed;
   bottom: 0.5rem;
-  left: 0;
-  right: 0;
-  width: 95%;
+  left: 1rem;
+  right: 1rem;
+  max-width: calc(#{$large} - 2rem);
+  margin: 0 auto;
   border-radius: $border-radius;
   box-shadow: var(--box-shadow);
   background-color: color-mix(in srgb, $dark-gray var(--color-mix-percentage), transparent);
@@ -21,7 +21,7 @@
   display: none;
 
   @include breakpoint($x-large) {
-    max-width: $x-large;
+    max-width: calc(#{$x-large} - 2rem);
   }
 
   p {

@@ -5,6 +5,8 @@
  * See LICENSE file for full license text.
  */
 
+import { throttle } from '../utils/index.js';
+
 function initResponsiveNav() {
   const nav = document.getElementById('site-nav');
   if (!nav) return;
@@ -64,8 +66,8 @@ function initResponsiveNav() {
     }
   };
 
-  window.addEventListener('resize', updateNav);
-  window.addEventListener('scroll', closeMenu);
+  window.addEventListener('resize', throttle(updateNav, 50));
+  window.addEventListener('scroll', throttle(closeMenu, 50));
   btnDropdown.addEventListener('click', toggleMenu);
   navLinks.addEventListener('click', (e) => {
     const link = e.target.closest('a');

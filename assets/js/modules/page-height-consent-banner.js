@@ -5,6 +5,8 @@
  * See LICENSE file for full license text.
  */
 
+import { throttle } from '../utils/index.js';
+
 function initPageHeightAdj() {
   const banner = document.getElementById('cookie-consent-banner');
   const backToTop = document.getElementById('back-to-top');
@@ -43,8 +45,8 @@ function initPageHeightAdj() {
     observer.observe(banner, { attributes: true, attributeFilter: ['style', 'class'] });
   }
   bumpIt();
-  window.addEventListener('resize', bumpIt);
-  window.addEventListener('orientationchange', bumpIt);
+  window.addEventListener('resize', throttle(bumpIt, 50));
+  window.addEventListener('orientationchange', throttle(bumpIt, 50));
 }
 
 export { initPageHeightAdj };

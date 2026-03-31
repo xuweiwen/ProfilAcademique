@@ -5,13 +5,15 @@
  * See LICENSE file for full license text.
  */
 
+import { throttle } from '../utils/index.js';
+
 function initBackToTop() {
   const btn = document.getElementById('back-to-top');
   if (!btn) return;
   function toggleButton() {
     btn.classList.toggle('hidden', window.scrollY <= 400);
   }
-  window.addEventListener('scroll', toggleButton);
+  window.addEventListener('scroll', throttle(toggleButton, 50));
   toggleButton();
 }
 

@@ -5,6 +5,8 @@
  * See LICENSE file for full license text.
  */
 
+import { throttle } from '../utils/index.js';
+
 function initCollapsibleSections({expandLabel = '&rtrif; ', collapseLabel = '&dtrif; '} = {}) {
   const sections = [];
   document.querySelectorAll('.header').forEach(header => {
@@ -26,13 +28,13 @@ function initCollapsibleSections({expandLabel = '&rtrif; ', collapseLabel = '&dt
     });
   });
 
-  window.addEventListener('resize', () => {
+  window.addEventListener('resize', throttle(() => {
     sections.forEach(({ content }) => {
       if (content.classList.contains('expanded')) {
         content.style.maxHeight = content.scrollHeight + 'px';
       }
     });
-  });
+  }, 50));
 }
 
 export { initCollapsibleSections };

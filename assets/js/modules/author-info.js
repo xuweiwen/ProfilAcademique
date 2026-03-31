@@ -5,6 +5,8 @@
  * See LICENSE file for full license text.
  */
 
+import { throttle } from '../utils/index.js';
+
 function initAuthorInfo() {
   const authorUrls = document.querySelector('.author__urls');
   const largeSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--large'));
@@ -19,7 +21,7 @@ function initAuthorInfo() {
   
   stickySideBar();
   
-  window.addEventListener('resize', stickySideBar);
+  window.addEventListener('resize', throttle(stickySideBar, 50));
   
   const button = document.querySelector('.author__urls-wrapper button');
   if (button) {

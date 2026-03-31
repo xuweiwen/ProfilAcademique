@@ -19,6 +19,8 @@
   font-size: $type-size-5;
   z-index: 9500;
   display: none;
+  animation: $global-animation;
+  animation-delay: 0.15s;
 
   @include breakpoint($x-large) {
     max-width: calc(#{$x-large} - 2rem);

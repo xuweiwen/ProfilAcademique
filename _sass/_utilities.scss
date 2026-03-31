@@ -441,6 +441,8 @@ a.reversefootnote {
 
   z-index: 9400;
   transition: $global-transition;
+  animation: $global-animation;
+  animation-delay: 0.15s;
 
   &:hover {
     background-color: color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent);

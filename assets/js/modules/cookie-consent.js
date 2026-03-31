@@ -28,22 +28,19 @@ function initCookieConsent() {
 
   const setConsent = (choice, reset = true) => {
     if (reset) {localStorage.setItem('cookie-consent', choice);}
-    banner.style.display = 'none';
+    banner.classList.toggle('hidden', choice === 'accepted' || choice === 'declined');
+    const accepted = choice === 'accepted';
     gtag('consent', 'update', {
-      analytics_storage: choice === 'accepted' ? 'granted' : 'denied'
+      analytics_storage: accepted ? 'granted' : 'denied'
     });
-    if (choice === 'accepted') loadGA();
+    if (accepted) loadGA();
   };
   
   acceptBtn?.addEventListener('click', () => setConsent('accepted'));
   declineBtn?.addEventListener('click', () => setConsent('declined'));
   
   const saved = localStorage.getItem('cookie-consent');
-  if (saved) {
-    setConsent(saved, false);
-  } else {
-    banner.style.display = 'block';
-  }
+  setConsent(saved, false);
 }
 
 export { initCookieConsent };

@@ -9,4 +9,6 @@
   color: $primary-color;
   border-top: 1px solid var(--border-color);
   margin-top: 2em;
+  animation: $global-animation;
+  animation-delay: 0.35s;
 }

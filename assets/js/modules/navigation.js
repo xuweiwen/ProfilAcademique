@@ -32,12 +32,13 @@ function initResponsiveNav() {
   let wideScreen = true;
 
   const applyMenuState = () => {
-    if (isMenuOpen && !wideScreen) {
-      dropdownOverlay.style.maxHeight = navLinks.offsetHeight + 'px';
-    }
+    const isDropdownVisible = isMenuOpen && !wideScreen;
     btnDropdown.classList.toggle('close', isMenuOpen);
     navLinks.classList.toggle('hidden', !isMenuOpen && !wideScreen);
-    dropdownOverlay.classList.toggle('hidden', !(isMenuOpen && !wideScreen));
+    if (isDropdownVisible) {
+      dropdownOverlay.style.maxHeight = navLinks.offsetHeight + 'px';
+    }
+    dropdownOverlay.classList.toggle('hidden', !isDropdownVisible);
   };
 
   const updateNav = () => {

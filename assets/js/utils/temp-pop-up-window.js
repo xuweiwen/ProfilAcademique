@@ -13,20 +13,19 @@ function initShowNotice() {
       event.preventDefault(); // Prevent default link behavior
       
       const targetId = link.getAttribute('data-target');
-      const displayStyle = link.getAttribute('data-display-style') || 'block'; // Default to 'block' if not specified
       const duration = parseInt(link.getAttribute('data-duration'), 10) || 5000; // Default to 5000ms if not specified
       
       // Call showNotice with the specific ID
-      if (targetId) showNotice(targetId, displayStyle, duration);  // Adjust the display style as needed
+      if (targetId) showNotice(targetId, duration);  // Adjust the display style as needed
     });
   });
 }
 
-const showNotice = (id, display_style = 'block', duration = 5000) => {
+const showNotice = (id, duration) => {
   const box = document.getElementById(id);
-  box.style.display = display_style;
+  box.classList.remove('hidden');
   setTimeout(() => {
-    box.style.display = 'none';
+    box.classList.add('hidden');
   }, duration);
 };
 

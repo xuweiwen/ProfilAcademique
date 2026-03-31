@@ -67,7 +67,7 @@ def hello():
 ### Notice
 
 <p><a href="#" class="show-notice-link" data-target="notice-id">Click here</a> to show a notice block.</p>
-<div id="notice-id" class="notice" markdown="1">
+<div id="notice-id" class="notice hidden" markdown="1">
 #### Title
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 </div>

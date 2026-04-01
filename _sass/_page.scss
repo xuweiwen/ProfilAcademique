@@ -4,7 +4,7 @@
 
 #main {
   @include container;
-  margin-top: 1rem;
+  margin-top: 4.25rem;
   padding-left: 1rem;
   padding-right: 1rem;
   animation: $global-animation;
@@ -40,17 +40,9 @@
 
 .page__content {
   #about-me{
-      &:before {
-        content: "";
-        display: block;
-        visibility: hidden;
-        position: relative;
-        height: 31rem;
-        margin-top: -31rem;
-        @include breakpoint($large) {
-          height: 4rem;
-          margin-top: -4rem;
-        }
+    margin-top: -27.5rem !important;
+    @include breakpoint($large) {
+      margin-top: -1px !important;
     }
   }
   

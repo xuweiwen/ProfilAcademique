@@ -4,22 +4,22 @@
 
 #main {
   @include container;
+  display: block;
   margin-top: 5rem;
   padding-left: 1rem;
   padding-right: 1rem;
   animation: $global-animation;
   animation-delay: 0.35s;
-  
-  @include breakpoint($x-large) {
-    max-width: $x-large;
-  }
 
   @include breakpoint($large) {
     display: grid;
     gap: $grid-gap;
     grid-template-columns: repeat($number-of-columns, 1fr);
     grid-template-rows: min-content auto;
-    overflow: visible;
+  }
+  
+  @include breakpoint($x-large) {
+    max-width: $x-large;
   }
 }
 

@@ -108,12 +108,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   border-bottom: 1px solid var(--border-color);
-  padding: 0 0 0 0;
+  padding: 0;
   margin-left: 2rem;
 
-  .paper-box-image{
-    justify-content: left;
-    display: flex;
+  .paper-box-image {
     width: 100%;
     order: 1;
     p {
@@ -129,24 +127,20 @@
     }
   }
   
-  .paper-box-text{
+  .paper-box-text {
     max-width: 100%;
     order: 2;
   }
   
   @include breakpoint($medium) {
-    .paper-box-image{
-      justify-content: left;
-      min-width: 195px;
+    .paper-box-image {
+      min-width: 190px;
       max-width: 30%;
-      order: 1;
     }
-      
-    .paper-box-text{
-      justify-content: left;
+    
+    .paper-box-text {
       padding-left: 2em;
       max-width: 70%;
-      order: 2;
       p {
         margin: $space-var 0;
       }
@@ -158,7 +152,7 @@
   padding-left: 1.1em;
   padding-right: 1.1em;
   position: absolute;
-  margin-top: $space-var * 2;
+  margin-top: $space-var;
   margin-left: -0.8em;
   color: #fff;
   background-color: var(--link-color);

@@ -6,8 +6,8 @@
   @include container;
   display: block;
   margin-top: 5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: $page-margin-lr;
+  padding-right: $page-margin-lr;
   animation: $global-animation;
   animation-delay: 0.35s;
 

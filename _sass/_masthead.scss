@@ -21,7 +21,7 @@
   &__inner {
     @include container;
     @include clearfix;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem $page-margin-lr;
 
     @include breakpoint($x-large) {
       max-width: $x-large;

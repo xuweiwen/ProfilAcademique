@@ -421,7 +421,7 @@ a.reversefootnote {
 
 #back-to-top {
   position: fixed;
-  right: 1rem;
+  right: $page-margin-lr;
   bottom: 2rem;
   width: 2rem;
   height: 2rem;

@@ -7,7 +7,7 @@
   bottom: 0.5rem;
   left: $page-margin-lr;
   right: $page-margin-lr;
-  max-width: calc(#{$large} - $page-margin-lr * 2);
+  max-width: calc(#{$large} - #{$page-margin-lr} * 2);
   margin: 0 auto;
   border-radius: $border-radius;
   box-shadow: var(--box-shadow);
@@ -23,7 +23,7 @@
   animation-delay: 0.15s;
 
   @include breakpoint($x-large) {
-    max-width: calc(#{$x-large} - $page-margin-lr * 2);
+    max-width: calc(#{$x-large} - #{$page-margin-lr} * 2);
   }
 
   p {

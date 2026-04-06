@@ -5,7 +5,7 @@
  * See LICENSE file for full license text.
  */
 
-import { throttle } from '../utils/index.js';
+import { remInPx, throttle } from '../utils/index.js';
 
 function initResponsiveNav() {
   const nav = document.getElementById('site-nav');
@@ -15,7 +15,6 @@ function initResponsiveNav() {
   const homeItem = nav.querySelector('.home-item');
   const navLinks = nav.querySelector('.nav-links');
   if (!btnTheme || !btnDropdown || !navLinks) return;
-  const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
   const measure = () => {
     return {

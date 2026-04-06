@@ -5,8 +5,9 @@
  * See LICENSE file for full license text.
  */
 
+import { body } from '../utils/index.js';
+
 function initModals() {
-  const body = document.body;
   const openButtons = document.querySelectorAll('[data-modal-open]');
   const closeButtons = document.querySelectorAll('[data-modal-close]');
 

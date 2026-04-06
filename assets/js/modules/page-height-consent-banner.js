@@ -5,13 +5,11 @@
  * See LICENSE file for full license text.
  */
 
-import { throttle } from '../utils/index.js';
+import { rootStyle, remInPx, body, throttle } from '../utils/index.js';
 
 function initPageHeightAdj() {
   const banner = document.getElementById('cookie-consent-banner');
   const backToTop = document.getElementById('back-to-top');
-  const rootStyle = getComputedStyle(document.documentElement);
-  const remInPx = parseFloat(rootStyle.fontSize);
   const largeSize = parseFloat(rootStyle.getPropertyValue('--large'));
   const xLargeSize = parseFloat(rootStyle.getPropertyValue('--x-large'));
   let baseOffset = 0;
@@ -31,12 +29,12 @@ function initPageHeightAdj() {
     const bannerVisible = banner && getComputedStyle(banner).display !== 'none';
     if (bannerVisible) {
       const bannerHeight = banner.offsetHeight;
-      document.body.style.marginBottom = (bannerHeight + 0.5 * remInPx) + 'px';
+      body.style.marginBottom = (bannerHeight + 0.5 * remInPx) + 'px';
       if (backToTop) {
         backToTop.style.bottom = (isNarrow ? bannerHeight + remInPx : baseOffset) + 'px';
       }
     } else {
-      document.body.style.marginBottom = '0';
+      body.style.marginBottom = '0';
       if (backToTop) backToTop.style.bottom = baseOffset + 'px';
     }
   };

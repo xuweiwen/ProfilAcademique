@@ -6,7 +6,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 2.5rem;
+  height: 2.4rem;
 
   a {
     display: block;
@@ -23,7 +23,7 @@
   .home-item {
     position: absolute;
     left: 0;
-    top: 1.25rem;
+    top: 1.2rem;
     transform: translateY(-50%);
     font-weight: bold;
     a {
@@ -34,7 +34,7 @@
 
   button {
     position: absolute;
-    top: 1.25rem;
+    top: 1.2rem;
     transform: translateY(-50%);
     border: 0;
     border-radius: $border-radius;
@@ -83,7 +83,7 @@
 
     &.dropdown {
       position: fixed;
-      top: 3.5rem;
+      top: 3.4rem;
       width: 100%;
       transform: none;
       flex-direction: column;

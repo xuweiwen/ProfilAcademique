@@ -14,19 +14,19 @@ function initResponsiveNav() {
   const btnDropdown = nav.querySelector('#dropdown-menu');
   const homeItem = nav.querySelector('.home-item');
   const navLinks = nav.querySelector('.nav-links');
-  const dropdownOverlay = document.getElementById('dropdown-overlay');
-  if (!btnTheme || !btnDropdown || !navLinks || !dropdownOverlay) return;
+  if (!btnTheme || !btnDropdown || !navLinks) return;
   const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
   const measure = () => {
     return {
+      navOrgHeight: nav.offsetHeight,
       linkOrgWidth: navLinks.offsetWidth,
       homeWidth: homeItem.offsetWidth,
       btnThemeWidth: btnTheme.offsetWidth
     };
   };
 
-  const { linkOrgWidth, homeWidth, btnThemeWidth } = measure();
+  const { navOrgHeight, linkOrgWidth, homeWidth, btnThemeWidth } = measure();
 
   let isMenuOpen = false;
   let wideScreen = true;
@@ -36,14 +36,13 @@ function initResponsiveNav() {
     btnDropdown.classList.toggle('close', isMenuOpen);
     navLinks.classList.toggle('hidden', !isMenuOpen && !wideScreen);
     if (isDropdownVisible) {
-      dropdownOverlay.style.maxHeight = navLinks.offsetHeight + 'px';
+      nav.style.height = navOrgHeight + navLinks.offsetHeight + 0.5 * remInPx + 'px';
+    } else {
+      nav.style.height = navOrgHeight + 'px';
     }
-    dropdownOverlay.classList.toggle('hidden', !isDropdownVisible);
   };
 
   const updateNav = () => {
-    const mastheadHeight = nav.offsetHeight + remInPx;
-    dropdownOverlay.style.top = mastheadHeight + 'px';
     const availableLR = (nav.offsetWidth - linkOrgWidth) / 2 - 2 * remInPx;
     wideScreen = availableLR >= homeWidth && availableLR >= btnThemeWidth;
     if (wideScreen) {

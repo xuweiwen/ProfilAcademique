@@ -52,11 +52,14 @@
 
   .button--theme {
     right: 0.3rem;
-    height: $type-size-1;
-    width: $type-size-1;
+    height: 1.75rem;
+    width: 1.75rem;
     background-color: transparent;
     padding: 0;
     .icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 100%;
       width: 100%;
       svg {

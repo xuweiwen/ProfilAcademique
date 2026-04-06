@@ -27,6 +27,8 @@ function initResponsiveNav() {
   };
 
   const { navOrgHeight, linkOrgWidth, homeWidth, btnThemeWidth } = measure();
+  const navCount = parseInt(navLinks.dataset.count, 10);
+  const navExpandHeight = navOrgHeight + (navCount * 2.5 + 0.5) * remInPx;
 
   let isMenuOpen = false;
   let wideScreen = true;
@@ -36,7 +38,7 @@ function initResponsiveNav() {
     btnDropdown.classList.toggle('close', isMenuOpen);
     navLinks.classList.toggle('hidden', !isMenuOpen && !wideScreen);
     if (isDropdownVisible) {
-      nav.style.height = navOrgHeight + navLinks.offsetHeight + 0.5 * remInPx + 'px';
+      nav.style.height = navExpandHeight + 'px';
     } else {
       nav.style.height = navOrgHeight + 'px';
     }

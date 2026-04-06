@@ -5,7 +5,7 @@
         <a href="{{ '/' | relative_url }}">Homepage</a>
       </div>
       <button id="dropdown-menu" class="button--dropdown" aria-label="Dropdown menu"><span class="navicon"></span></button>
-      <ul class="nav-links">
+      <ul class="nav-links" data-count="{{ site.data.navigation.main | size }}">
         {% for link in site.data.navigation.main %}
           <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
         {% endfor %}

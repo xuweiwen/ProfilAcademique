@@ -25,8 +25,6 @@ function initModals() {
     btn.addEventListener('click', () => {
       const modal = btn.closest('.modal');
       modal.classList.remove('active');
-
-      // hide overlay if no other modals are active
       if (document.querySelectorAll('.modal.active').length === 0) {
         body.classList.remove('show-modal');
       }

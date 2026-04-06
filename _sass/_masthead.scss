@@ -10,8 +10,8 @@
   background-image: linear-gradient(
     to bottom,
     var(--background-color) 0%,
-    color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent) 60%,
-    color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent)
+    color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent) 2rem,
+    color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent) 100%
   );
   backdrop-filter: var(--glass-effect);
   animation: $global-animation;

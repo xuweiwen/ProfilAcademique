@@ -68,6 +68,9 @@ $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
 $info-color                 : #3f6188;
 
+$highlight-text-color       : #c0392b;
+$highlight-text-color-dark  : #ff6b6b;
+
 /* brands */
 $dribbble-color             : #ea4c89;
 $facebook-color             : #0866ff;
@@ -89,6 +92,7 @@ $googlescholar-color        : #4d90fe;
   --x-large                    : #{$x-large};
   --text-color                 : #{$dark-gray};
   --background-color           : #fff;
+  --highlight-text-color       : #{$highlight-text-color};
   --color-mix-percentage-trans : 20%;
   --color-mix-percentage       : 80%;
   --glass-effect               : saturate(150%) blur(10px);
@@ -108,6 +112,7 @@ $googlescholar-color        : #4d90fe;
 [data-theme="dark"] {
   --text-color                 : #{$light-gray};
   --background-color           : #000;
+  --highlight-text-color       : #{$highlight-text-color-dark};
   --color-mix-percentage-trans : 15%;
   --color-mix-percentage       : 70%;
   --glass-effect               : saturate(180%) blur(12px);

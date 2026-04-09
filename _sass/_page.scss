@@ -170,6 +170,11 @@
   display: inline-block;
 }
 
+.highlight-text {
+  color: var(--highlight-text-color);
+  font-weight: 500;
+}
+
 .custom-divider {
   @include divider();
 }

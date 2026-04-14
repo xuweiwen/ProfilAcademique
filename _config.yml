@@ -27,30 +27,30 @@ author:
   bio              : "A website template"
   location         : "City, State"
   employer         :
-  googlescholar    : "google-scholar-id-placeholder"
-  email            : "email@example.com"
-  researchgate     :
   uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           :
+  email            : "email@example.com"
   keybase          :
-  instagram        :
-  lastfm           :
+  researchgate     :
+  facebook         :
   linkedin         : "linkedin-username-placeholder"
-  orcid            :
-  pinterest        :
-  soundcloud       :
-  stackoverflow    :
-  steam            :
-  tumblr           :
-  weibo            :
   xing             :
+  instagram        :
+  tumblr           :
+  bitbucket        :
+  github           :
+  stackoverflow    :
+  lastfm           :
+  dribbble         :
+  pinterest        :
+  foursquare       :
+  steam            :
   youtube          :
+  soundcloud       :
+  weibo            :
+  flickr           :
+  codepen          :
+  googlescholar    : "google-scholar-id-placeholder"
+  orcid            :
   wikipedia        :
 
 

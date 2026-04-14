@@ -41,7 +41,10 @@
 
 .page__content {
   #about-me{
-    margin-top: -0.75rem !important;
+    margin-top: -17.5rem !important;
+    @include breakpoint($large) {
+      margin-top: -0.75rem !important;
+    }
   }
   
   h2 {

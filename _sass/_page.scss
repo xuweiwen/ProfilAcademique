@@ -10,6 +10,7 @@
   padding-right: $page-margin-lr;
   animation: $global-animation;
   animation-delay: 0.35s;
+  min-width: $page-min-width;
 
   @include breakpoint($large) {
     display: grid;
@@ -40,10 +41,7 @@
 
 .page__content {
   #about-me{
-    margin-top: -27.25rem !important;
-    @include breakpoint($large) {
-      margin-top: -0.75rem !important;
-    }
+    margin-top: -0.75rem !important;
   }
   
   h2 {

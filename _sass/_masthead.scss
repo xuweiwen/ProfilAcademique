@@ -6,6 +6,7 @@
   @include divider();
   position: fixed;
   width: 100%;
+  min-width: $page-min-width;
   top: 0;
   background-image: linear-gradient(
     to bottom,

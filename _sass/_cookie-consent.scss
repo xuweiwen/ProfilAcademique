@@ -8,6 +8,7 @@
   left: $page-margin-lr;
   right: $page-margin-lr;
   max-width: calc(#{$large} - #{$page-margin-lr} * 2);
+  min-width: calc(#{$page-min-width} - #{$page-margin-lr} * 2);
   margin: 0 auto;
   border-radius: $border-radius;
   box-shadow: var(--box-shadow);
@@ -34,6 +35,6 @@
     @include button-base(#fff, $info-color, darken($info-color, 15%));
     padding: 0.5em 0.75em;
     margin: 0.5em 1em 0 1em;
-    width: 5em;
+    min-width: 5em;
   }
 }

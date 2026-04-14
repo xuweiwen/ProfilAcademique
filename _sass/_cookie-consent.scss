@@ -34,5 +34,6 @@
     @include button-base(#fff, $info-color, darken($info-color, 15%));
     padding: 0.5em 0.75em;
     margin: 0.5em 1em 0 1em;
+    width: 5em;
   }
 }

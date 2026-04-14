@@ -4,6 +4,7 @@
 
 .page__footer {
   text-align: center;
+  min-width: $page-min-width;
   padding: 1em 0;
   font-size: $type-size-6;
   color: $primary-color;

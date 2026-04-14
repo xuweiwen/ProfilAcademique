@@ -7,3 +7,4 @@ export { initModals } from './modal.js';
 export { initExternalLinks } from './external-link.js';
 export { initVideoAspectRatio } from './video-aspect-ratio.js';
 export { initBackToTop } from './back-to-up.js';
+export { initAboutMeAnchor } from './about-me-anchor.js';

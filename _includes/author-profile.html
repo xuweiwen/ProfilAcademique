@@ -24,16 +24,7 @@
       <li><a href="{{ author.uri }}" aria-label="URL"><i class="fa-solid fa-link" aria-hidden="true"></i> <span>Website</span></a></li>
     {% endif %}
     {% if author.email %}
-      <li>
-        <script>
-          const email = "{{ author.email }}";
-          const [user, domain] = email.split("@");
-          const fullEmail = `${user} [at] ${domain}`;
-          document.write(
-            `<a href="mailto:{{ author.email }}" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i> <span>${fullEmail}</span></a>`
-          );
-        </script>
-      </li>
+      <li><a id="email-link" aria-label="Email" data-email="{{ author.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> <span id="email-text"></span></a></li>
     {% endif %}
     {% if author.keybase %}
       <li><a href="https://keybase.io/{{ author.keybase }}" aria-label="Keybase"><i class="fa-brands fa-keybase" aria-hidden="true"></i> <span>Keybase</span></a></li>

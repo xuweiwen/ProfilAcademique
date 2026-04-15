@@ -9,8 +9,9 @@ import { rootStyle } from '../utils/index.js';
 
 function initAboutMeAnchor() {
   const anchor = document.getElementById('about-me');
-  const largeSize = parseFloat(rootStyle.getPropertyValue('--large'));
   const sidebar = document.querySelector('.sidebar');
+  if (!anchor || !sidebar) return;
+  const largeSize = parseFloat(rootStyle.getPropertyValue('--large'));
   const orgMarginTop = parseFloat(getComputedStyle(anchor).marginTop);
   const sidebarMarginBottom = parseFloat(getComputedStyle(sidebar).marginBottom);
 

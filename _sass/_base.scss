@@ -126,15 +126,12 @@ a {
 }
 
 a,
-.cookie-consent-content button,
-.nav-bar button {
-
-  &:focus,
+button {
+  &:focus:not(:focus-visible),
   &:hover,
   &:active {
-    outline: 0;
+    outline: none;
   }
-
   &:focus-visible {
     @include tab-focus;
   }

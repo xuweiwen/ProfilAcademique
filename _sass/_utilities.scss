@@ -355,17 +355,17 @@ a.reversefootnote {
   bottom: 2rem;
   width: 2rem;
   height: 2rem;
-
   border: 1px solid var(--border-color);
   backdrop-filter: var(--glass-effect);
   box-shadow: var(--box-shadow);
   text-decoration: none;
-
   z-index: 9400;
   transition: $global-transition;
   animation: $global-animation;
   animation-delay: 0.15s;
-
+  &:focus-visible {
+    @include tab-focus;
+  }
   svg {
     width: 1em;
     height: 1em;

@@ -349,7 +349,11 @@ a.reversefootnote {
    ========================================================================== */
 
 #back-to-top {
-  @include button-base(var(--text-color), color-mix(in srgb, var(--background-color) var(--color-mix-percentage-trans), transparent), color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent));
+  @include button-base(
+    var(--text-color),
+    color-mix(in srgb, var(--background-color) var(--color-mix-percentage-trans), transparent),
+    color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent)
+  );
   position: fixed;
   right: $page-margin-lr;
   bottom: 2rem;

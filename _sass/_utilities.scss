@@ -349,37 +349,22 @@ a.reversefootnote {
    ========================================================================== */
 
 #back-to-top {
+  @include button-base(var(--text-color), color-mix(in srgb, var(--background-color) var(--color-mix-percentage-trans), transparent), color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent));
   position: fixed;
   right: $page-margin-lr;
   bottom: 2rem;
   width: 2rem;
   height: 2rem;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: $border-radius;
   border: 1px solid var(--border-color);
-  background-color: color-mix(in srgb, var(--background-color) var(--color-mix-percentage-trans), transparent);
   backdrop-filter: var(--glass-effect);
   box-shadow: var(--box-shadow);
-  color: var(--text-color);
   text-decoration: none;
-  font-size: $type-size-5;
-  outline: none;
 
   z-index: 9400;
   transition: $global-transition;
   animation: $global-animation;
   animation-delay: 0.15s;
-
-  &:hover {
-    background-color: color-mix(in srgb, var(--background-color) var(--color-mix-percentage), transparent);
-  }
-  &:focus-visible {
-    @include tab-focus;
-  }
 
   svg {
     width: 1em;

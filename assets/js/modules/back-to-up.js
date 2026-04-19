@@ -13,8 +13,16 @@ function initBackToTop() {
   function toggleButton() {
     btn.classList.toggle('hidden', window.scrollY <= 400);
   }
+  function scrollToTop() {
+    if (window.scrollY === 0) return;
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
   window.addEventListener('scroll', throttle(toggleButton, 50));
   toggleButton();
+  btn.addEventListener('click', scrollToTop);
 }
 
 export { initBackToTop };

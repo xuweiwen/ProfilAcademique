@@ -88,9 +88,6 @@ $highlight-text-color-dark  : #ff6b6b;
   --link-color                 : #{$info-color};
   --link-color-hover           : #{darken($info-color, 15%)};
   --box-shadow                 : 3px 3px 6px 0px #{$gray};
-  --btn-text-color             : #fff;
-  --btn-background-color       : #{$dark-gray};
-  --btn-background-color-hover : #{$darker-gray};
 }
 
 [data-theme="dark"] {
@@ -106,9 +103,6 @@ $highlight-text-color-dark  : #ff6b6b;
   --background-color-emph      : #{$darker-gray};
   --link-color                 : #{lighten($info-color, 22%)};
   --link-color-hover           : #{lighten($info-color, 37%)};
-  --btn-text-color             : #000;
-  --btn-background-color       : #{$light-gray};
-  --btn-background-color-hover : #{$lighter-gray};
 }
 
 .button--theme #icon-moon { opacity: 1; }

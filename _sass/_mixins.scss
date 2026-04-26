@@ -99,7 +99,7 @@
   border-bottom: 1px solid $color;
 }
 
-@mixin button-base($color: var(--btn-text-color), $bg: var(--btn-background-color), $bg-hover: var(--btn-background-color-hover)) {
+@mixin button-base($color: #fff, $bg: $gray, $bg-hover: $dark-gray) {
   display: inline-block;
   color: $color;
   font-size: $type-size-6;

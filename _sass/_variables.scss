@@ -68,15 +68,15 @@ $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
 $info-color                 : #3f6188;
 
-$highlight-text-color       : #c0392b;
-$highlight-text-color-dark  : #ff6b6b;
+$highlight-color            : #c0392b;
+$highlight-color-dark       : #ff6b6b;
 
 :root {
   --large                      : #{$large};
   --x-large                    : #{$x-large};
   --text-color                 : #{$dark-gray};
   --background-color           : #fff;
-  --highlight-text-color       : #{$highlight-text-color};
+  --highlight-color            : #{$highlight-color};
   --color-mix-percentage-trans : 20%;
   --color-mix-percentage       : 80%;
   --glass-effect               : saturate(150%) blur(10px);
@@ -93,7 +93,7 @@ $highlight-text-color-dark  : #ff6b6b;
 [data-theme="dark"] {
   --text-color                 : #{$light-gray};
   --background-color           : #000;
-  --highlight-text-color       : #{$highlight-text-color-dark};
+  --highlight-color            : #{$highlight-color-dark};
   --color-mix-percentage-trans : 15%;
   --color-mix-percentage       : 70%;
   --glass-effect               : saturate(180%) blur(12px);

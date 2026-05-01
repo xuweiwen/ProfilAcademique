@@ -117,28 +117,14 @@ body:hover .visually-hidden button {
   position: relative;
   top: -0.1em;
   vertical-align: middle;
-}
 
-/* social icons*/
-
-.icon-color-red {
-  color: #ff1d25;
-}
-
-.icon-color-green {
-  color: #7ac943;
-}
-
-.icon-color-blue {
-  color: #3fa9f5;
-}
-
-.icon-color-yellow {
-  color: #ff931e;
-}
-
-.icon-color-pink {
-  color: #ff7bac;
+  &--color {
+    &-red { color: #ff1d25; }
+    &-green { color: #7ac943; }
+    &-blue { color: #3fa9f5; }
+    &-yellow { color: #ff931e; }
+    &-pink { color: #ff7bac; }
+  }
 }
 
 

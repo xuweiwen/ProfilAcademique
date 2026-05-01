@@ -3,7 +3,7 @@ title: Features
 permalink: /features/
 ---
 
-## <i class="fa-solid fa-chalkboard icon-color-pink"></i> Features
+## <i class="fa-solid fa-chalkboard icon--color-pink"></i> Features
 
 ### Math Equation
 

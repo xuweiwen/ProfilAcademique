@@ -32,6 +32,23 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 <div class="paper-box">
 <div class="paper-box-image">
 <div markdown="1">
+<div class="badge-image badge-image--highlight">[Venue] [Year]</div>
+![Paper cover]({{ "/images/publication-teaser/example-image.png" | relative_url }})
+</div>
+</div>
+<div class="paper-box-text" markdown="1">
+
+[Paper title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit](https://ieeexplore.ieee.org)<br>
+**[A. N. Other]**, [Co-author], [Co-author]<br>
+[Venue], [Year] <span class="highlight-text">(highlight)</span><br>
+[[arXiv](https://arxiv.org)] [[Code](https://github.com)]
+
+</div>
+</div>
+
+<div class="paper-box">
+<div class="paper-box-image">
+<div markdown="1">
 <div class="badge-image">[Venue] [Year]</div>
 ![Paper cover]({{ "/images/publication-teaser/example-image.png" | relative_url }})
 </div>

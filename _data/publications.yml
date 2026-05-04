@@ -1,0 +1,57 @@
+- type: featured
+  title: "Paper title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+  title_short: "Paper title"
+  link: https://ieeexplore.ieee.org
+  authors: 
+    - name: A. N. Other
+      highlight: true
+      note: "*"
+    - name: Co-author
+      note: "*"
+    - name: Co-author
+  venue: "[Venue], [Year]"
+  venue_short: "[Venue] [Year]"
+  image: /images/publication-teaser/example-image.png
+  highlight: true
+  highlight_text: "(highlight)"
+  note: "(*Equal contribution)"
+  links: 
+    - name: arXiv
+      url: https://arxiv.org
+    - name: Code
+      url: https://github.com
+
+- type: featured
+  title: "Paper title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+  title_short: "Paper title"
+  link: https://ieeexplore.ieee.org
+  authors: 
+    - name: A. N. Other
+      highlight: true
+    - name: Co-author
+    - name: Co-author
+  venue: "[Venue], [Year]"
+  venue_short: "[Venue] [Year]"
+  image: /images/publication-teaser/example-image.png
+  highlight: false
+  highlight_text: null
+  note: null
+  links: 
+    - name: arXiv
+      url: https://arxiv.org
+    - name: Code
+      url: https://github.com
+
+- type: simple
+  title: "Paper title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+  link: https://ieeexplore.ieee.org
+  authors: 
+    - name: Co-author
+    - name: A. N. Other
+      highlight: true
+    - name: Co-author
+  venue: "[Venue], [Year]"
+  venue_short: "[Venue] [Year]"
+  highlight: false
+  highlight_text: null
+  note: null

@@ -1,0 +1,54 @@
+<div class="paper-box{% if include.is_last %} paper-box--last{% endif %}{% if include.border_top %} paper-box--border-top{% endif %}">
+  <div class="paper-box-image">
+    <div class="badge-image {% if include.pub.highlight %}badge-image--highlight{% endif %}">
+      {{ include.pub.venue_short }}
+    </div>
+    <img
+        src="{{ include.pub.image | relative_url }}"
+        alt="{{ include.pub.title_short | default: include.pub.title }} cover"
+    >
+  </div>
+
+  <div class="paper-box-text">
+    <div class="pub-title">
+      {% if include.pub.link %}
+        <a href="{{ include.pub.link }}">{{ include.pub.title }}</a>
+      {% else %}
+        {{ include.pub.title }}
+      {% endif %}
+    </div>
+
+    <div class="pub-authors">
+      {% for author in include.pub.authors -%}
+        {% if author.highlight -%}
+          <span class="highlight-author">{{ author.name }}</span>
+        {%- else -%}
+          {{ author.name }}
+        {%- endif -%}
+        {%- if author.note -%}{{ author.note }}{%- endif -%}
+        {%- unless forloop.last -%}, {% endunless -%}
+      {%- endfor %}
+    </div>
+
+    <div class="pub-venue">
+      {{ include.pub.venue }}
+      {% if include.pub.highlight_text %}
+        <span class="highlight-text">{{ include.pub.highlight_text }}</span>
+      {% endif %}
+    </div>
+
+    {% if include.pub.note %}
+      <div class="pub-note">
+        {{ include.pub.note }}
+      </div>
+    {% endif %}
+
+    {% if include.pub.links and include.pub.links.size > 0 %}
+      <div class="pub-links">
+        {% for link in include.pub.links %}
+          [<a href="{{ link.url }}">{{ link.name }}</a>]{% unless forloop.last %} {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>

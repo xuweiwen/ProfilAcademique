@@ -29,43 +29,33 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 
 ## <i class="fa-solid fa-file-lines icon--color-blue"></i> Publications {#publications}
 
-<div class="paper-box">
-<div class="paper-box-image">
-<div markdown="1">
-<div class="badge-image badge-image--highlight">[Venue] [Year]</div>
-![Paper cover]({{ "/images/publication-teaser/example-image.png" | relative_url }})
-</div>
-</div>
-<div class="paper-box-text" markdown="1">
+<div markdown="0">
+{% assign prev_type = nil %}
 
-[Paper title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit](https://ieeexplore.ieee.org)<br>
-**[A. N. Other]**, [Co-author], [Co-author]<br>
-[Venue], [Year] <span class="highlight-text">(highlight)</span><br>
-[[arXiv](https://arxiv.org)] [[Code](https://github.com)]
-
+{% for pub in site.data.publications %}
+  {% if pub.type != prev_type %}
+    {% if prev_type == "simple" %}
+      </ul>
+    {% endif %}
+    {% if pub.type == "simple" %}
+      <ul>
+    {% endif %}
+  {% endif %}
+  {% if pub.type == "simple" %}
+    {% include publication-simple.html pub=pub %}
+  {% else %}
+    {% assign border_top = false %}
+    {% if prev_type == "simple" %}
+      {% assign border_top = true %}
+    {% endif %}
+    {% include publication-featured.html pub=pub is_last=forloop.last border_top=border_top %}
+  {% endif %}
+  {% if pub.type == "simple" and forloop.last %}
+    </ul>
+  {% endif %}
+  {% assign prev_type = pub.type %}
+{% endfor %}
 </div>
-</div>
-
-<div class="paper-box">
-<div class="paper-box-image">
-<div markdown="1">
-<div class="badge-image">[Venue] [Year]</div>
-![Paper cover]({{ "/images/publication-teaser/example-image.png" | relative_url }})
-</div>
-</div>
-<div class="paper-box-text" markdown="1">
-
-[Paper title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit](https://ieeexplore.ieee.org)<br>
-**[A. N. Other]**, [Co-author], [Co-author]<br>
-[Venue], [Year]<br>
-[[arXiv](https://arxiv.org)] [[Code](https://github.com)]
-
-</div>
-</div>
-
-- <span class="badge-text">[Venue] [Year]</span> [Paper title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit](https://ieeexplore.ieee.org)<br>
-**[A. N. Other]**, [Co-author], [Co-author]<br>
-[Venue], [Year]
 
 ## <i class="fa-solid fa-gear icon--color-yellow"></i> Services {#services}
 

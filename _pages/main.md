@@ -24,10 +24,10 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 
 ## <i class="fa-solid fa-briefcase icon--color-green"></i> Work Experience {#education}
 
-- [Role], [Company], [Start Year]&ndash;[End Year]
+- *[Role]*, [Company], [Start Year]&ndash;[End Year]
   - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
   - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-- [Role], [Company], [Start Year]&ndash;[End Year]
+- *[Role]*, [Company], [Start Year]&ndash;[End Year]
   - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
   - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
 

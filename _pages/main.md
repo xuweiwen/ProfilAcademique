@@ -22,10 +22,14 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 </div>
 </div>
 
-## <i class="fa-solid fa-graduation-cap icon--color-green"></i> Education {#education}
+## <i class="fa-solid fa-briefcase icon--color-green"></i> Work Experience {#education}
 
-- [Degree] in [Program], [University], [Start Year]&ndash;[End Year]
-- [Degree] in [Program], [University], [Start Year]&ndash;[End Year]
+- [Role], [Company], [Start Year]&ndash;[End Year]
+  - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+  - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+- [Role], [Company], [Start Year]&ndash;[End Year]
+  - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+  - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
 
 ## <i class="fa-solid fa-file-lines icon--color-blue"></i> Publications {#publications}
 
@@ -56,6 +60,11 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
   {% assign prev_type = pub.type %}
 {% endfor %}
 </div>
+
+## <i class="fa-solid fa-graduation-cap icon--color-purple"></i> Education {#education}
+
+- [Degree] in [Program], [University], [Start Year]&ndash;[End Year]
+- [Degree] in [Program], [University], [Start Year]&ndash;[End Year]
 
 ## <i class="fa-solid fa-gear icon--color-yellow"></i> Services {#services}
 

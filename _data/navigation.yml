@@ -6,11 +6,14 @@ main:
   - title: "News"
     url: "/#news"
 
-  - title: "Education"
-    url: "/#education"
+  - title: "Work Experience"
+    url: "/#work-experience"
 
   - title: "Publications"
     url: "/#publications"
+
+  - title: "Education"
+    url: "/#education"
 
   - title: "Services"
     url: "/#services"

@@ -22,7 +22,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 </div>
 </div>
 
-## <i class="fa-solid fa-briefcase icon--color-yellow"></i> Work Experience {#work-experience}
+## <i class="fa-solid fa-briefcase icon--color-blue"></i> Work Experience {#work-experience}
 
 - *[Role]*, [Company], [Start Year]&ndash;[End Year]
   - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
@@ -31,7 +31,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
   - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
   - Lorem ipsum dolor sit amet, consectetuer adipiscing elit
 
-## <i class="fa-solid fa-file-lines icon--color-green"></i> Publications {#publications}
+## <i class="fa-solid fa-file-lines icon--color-purple"></i> Publications {#publications}
 
 <div markdown="0">
 {% assign prev_type = nil %}
@@ -61,12 +61,12 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
 {% endfor %}
 </div>
 
-## <i class="fa-solid fa-graduation-cap icon--color-blue"></i> Education {#education}
+## <i class="fa-solid fa-graduation-cap icon--color-yellow"></i> Education {#education}
 
 - [Degree] in [Program], [University], [Start Year]&ndash;[End Year]
 - [Degree] in [Program], [University], [Start Year]&ndash;[End Year]
 
-## <i class="fa-solid fa-gear icon--color-purple"></i> Services {#services}
+## <i class="fa-solid fa-gear icon--color-green"></i> Services {#services}
 
 - *[Role]*, [Committee], [Year]
 - *[Role]*, [Conference/Journal], [Year]

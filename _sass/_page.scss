@@ -124,20 +124,22 @@
   }
   
   .paper-box-text {
-    max-width: 100%;
+    width: 100%;
     order: 2;
     margin: 0 0 $space-var 0;
   }
   
   @include breakpoint($medium) {
     .paper-box-image {
-      min-width: 190px;
-      max-width: 30%;
+      width: 30%;
+      img {
+        max-width: none;
+      }
     }
     
     .paper-box-text {
       padding-left: 2em;
-      max-width: 70%;
+      width: 70%;
       margin-top: $space-var;
     }
   }
